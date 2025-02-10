@@ -84,7 +84,7 @@ img.animated.pulse {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-white);
+    color: #8DC63F;
     font-weight: bolder;
 }
 
@@ -100,7 +100,7 @@ img.animated.pulse {
 @media (max-width: 991.98px) {
     .navbar .navbar-nav {
         padding: 0 15px;
-        background: var(--bs-primary);
+        background: #ffffff;
     }
 
     .navbar .navbar-nav .nav-link {
@@ -133,7 +133,7 @@ img.animated.pulse {
 .hero-header {
     position: relative;
     padding-top: 12rem;
-    padding-bottom: 55rem;
+    padding-bottom: 50rem;
     background: url(../img/bg.png) center center no-repeat;
     background-size: cover;
 }
@@ -271,7 +271,7 @@ img.animated.pulse {
 /*** Testimonial ***/
 .testimonial {
     position: relative;
-    background: url(../img/bg.png) center center no-repeat;
+    background: url(../img/testimonial_bg.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -350,13 +350,12 @@ img.animated.pulse {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, .1);
-    clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
+    background: #8DC63F !important;
 }
 
 .contact-info-item .border {
     position: relative;
-    border-color: rgba(255, 255, 255, .2) !important;
+    border-color: transparent !important;
     z-index: 1;
 }
 
