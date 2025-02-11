@@ -133,9 +133,9 @@ img.animated.pulse {
 .hero-header {
     position: relative;
     padding-top: 12rem;
-    padding-bottom: 50rem;
+    padding-bottom: 55rem;
     background: url(../img/bg.png) center center no-repeat;
-    background-size: cover;
+    background-size: 90% auto;
 }
 
 .hero-header::before {
@@ -195,7 +195,7 @@ img.animated.pulse {
 /*** Deal ***/
 .deal {
     position: relative;
-    background: url(../img/bg.png) center center no-repeat;
+    background: #8DC63F;
     background-size: cover;
 }
 
@@ -207,7 +207,6 @@ img.animated.pulse {
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, .1);
-    clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
 }
 
 .deal .bg-white {
@@ -227,7 +226,7 @@ img.animated.pulse {
 /*** How To Use ***/
 .how-to-use {
     position: relative;
-    background: url(../img/bg.png) center center no-repeat;
+    background: #8DC63F;
     background-size: cover;
 }
 
@@ -239,7 +238,6 @@ img.animated.pulse {
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, .1);
-    clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
 }
 
 .how-to-use .container {
@@ -272,7 +270,7 @@ img.animated.pulse {
 .testimonial {
     position: relative;
     background: url(../img/testimonial_bg.png) center center no-repeat;
-    background-size: cover;
+    background-size: 80% auto;
 }
 
 .testimonial::before {
