@@ -269,8 +269,8 @@ img.animated.pulse {
 /*** Testimonial ***/
 .testimonial {
     position: relative;
-    background: url(../img/testimonial_bg.png) center center no-repeat;
-    background-size: 80% auto;
+    background: var(--bs-white);
+    background-size: 100% auto;
 }
 
 .testimonial::before {
@@ -320,7 +320,7 @@ img.animated.pulse {
 }
 
 .testimonial-carousel .owl-dot.active {
-    background: var(--bs-dark);
+    background: #8DC63F;
 }
 
 
@@ -348,13 +348,24 @@ img.animated.pulse {
     height: 100%;
     top: 0;
     left: 0;
-    background: #8DC63F !important;
 }
 
 .contact-info-item .border {
     position: relative;
     border-color: transparent !important;
     z-index: 1;
+}
+
+#meet-us{
+    background: #EF4136 !important;
+}
+
+#call-us{
+    background: #FEBE10 !important;
+}
+
+#send-us-email{
+    background: #8DC63F !important;
 }
 
 
