@@ -19,6 +19,8 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
+    background-color: #8DC63F;
+    color: var(--bs-white);
 }
 
 img.animated.pulse {
@@ -448,4 +450,21 @@ img.animated.pulse {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.social-icon{
+    color: var(--bs-white) !important;
+    padding: 1rem;
+}
+
+#instagram{
+    background: #EF4136 !important;
+}
+
+#facebook{
+    background: #FEBE10 !important;
+}
+
+#linkedin{
+    background: #8DC63F !important;
 }
