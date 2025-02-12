@@ -63,6 +63,30 @@ img.animated.pulse {
     border-radius: 50px;
 }
 
+.text-red {
+    color: #EF4136 !important;
+}
+
+.text-yellow {
+    color: #FEBE10 !important;
+}
+
+.text-green {
+    color: #8DC63F !important;
+}
+
+.bg-red {
+    background-color: #EF4136 !important;
+}
+
+.bg-yellow {
+    background-color: #FEBE10 !important;
+}
+
+.bg-green {
+    background-color: #8DC63F !important;
+}
+
 
 /*** Navbar ***/
 .sticky-top {
