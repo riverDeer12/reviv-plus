@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="merged changes from yestreday">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="finished with testimonials and footer, need to change about section">
+      <change afterPath="$PROJECT_DIR$/img/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/site.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/product-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shampoo-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shampoo-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/shampoo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/testimonial-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/testimonial-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/testimonial-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +39,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "production",
-    "last_opened_file_path": "C:/_projects/reviv-plus",
+    "last_opened_file_path": "/Users/riverdeer/Projects/reviv-plus/img",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739354379620</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished with testimonials and footer, need to change about section">
+      <option name="closed" value="true" />
+      <created>1739374800006</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739374800006</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +104,7 @@
     <MESSAGE value="finished with contact section, need to insert about content put footer links and redesign footer bit more" />
     <MESSAGE value="working on content" />
     <MESSAGE value="merged changes from yestreday" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged changes from yestreday" />
+    <MESSAGE value="finished with testimonials and footer, need to change about section" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished with testimonials and footer, need to change about section" />
   </component>
 </project>
