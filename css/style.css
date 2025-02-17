@@ -160,7 +160,8 @@ img.animated.pulse {
     padding-top: 12rem;
     padding-bottom: 55rem;
     background: url(../img/bg.png) center center no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    height: 100vh;
 }
 
 .hero-header::before {
@@ -185,8 +186,15 @@ img.animated.pulse {
     background: url(../img/hero-testimonials.png) center center no-repeat !important;
 }
 
-.about-hero{
+.about-hero {
     background: url(../img/hero-about.png) center center no-repeat !important;
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        height: 100%;
+        padding-bottom: 20rem;
+    }
 }
 
 
