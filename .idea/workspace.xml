@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added new pictures">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="fixed responsive of container hero images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
@@ -60,7 +60,7 @@
       <updated>1739281459864</updated>
       <workItem from="1739281462561" duration="4125000" />
       <workItem from="1739791709965" duration="3285000" />
-      <workItem from="1739824526598" duration="1294000" />
+      <workItem from="1739824526598" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -93,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739794317861</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed responsive of container hero images">
+      <option name="closed" value="true" />
+      <created>1739825956934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739825956934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +125,7 @@
     <MESSAGE value="merged changes from yestreday" />
     <MESSAGE value="finished with testimonials and footer, need to change about section" />
     <MESSAGE value="added new pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new pictures" />
+    <MESSAGE value="fixed responsive of container hero images" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed responsive of container hero images" />
   </component>
 </project>

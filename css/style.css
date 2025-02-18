@@ -193,7 +193,20 @@ img.animated.pulse {
 @media (max-width: 768px) {
     .hero-header {
         height: 100%;
-        padding-bottom: 20rem;
+        padding-bottom: 10rem;
+        background-size: 100% !important;
+    }
+
+    #about {
+        padding-top: 0 !important;
+    }
+
+    #benefits {
+        padding-top: 0 !important;
+    }
+
+    .testimonial{
+        padding-bottom: 0 !important;
     }
 }
 
