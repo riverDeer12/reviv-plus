@@ -158,7 +158,7 @@ img.animated.pulse {
 .hero-header {
     position: relative;
     padding-top: 12rem;
-    padding-bottom: 55rem;
+    padding-bottom: 65rem;
     background: url(../img/bg.png) center center no-repeat;
     background-size: 100%;
     height: 100vh;
@@ -184,6 +184,7 @@ img.animated.pulse {
 
 .testimonials-hero {
     background: url(../img/hero-testimonials.png) center center no-repeat !important;
+    background-size: 100% !important;
 }
 
 .about-hero {
