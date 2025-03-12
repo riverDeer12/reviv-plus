@@ -67,6 +67,12 @@ img.animated.pulse {
     border-radius: 50px;
 }
 
+.call-to-action-btn {
+    border-bottom: 5px solid #8BC34A;
+    color: #8BC34A;
+    font-weight: bolder;
+}
+
 .text-red {
     color: #EF4136 !important;
 }
