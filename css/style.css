@@ -71,6 +71,7 @@ img.animated.pulse {
     border-bottom: 5px solid #8BC34A;
     color: #8BC34A;
     font-weight: bolder;
+    font-size: 1.15rem !important;
 }
 
 .text-red {
