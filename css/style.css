@@ -33,6 +33,10 @@ img.animated.pulse {
     transition: .5s;
 }
 
+.btn-primary{
+    background-color: #8DC63F !important;
+}
+
 .btn.btn-primary {
     color: var(--bs-white);
 }
