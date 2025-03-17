@@ -33,7 +33,7 @@ img.animated.pulse {
     transition: .5s;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #8DC63F !important;
 }
 
@@ -68,8 +68,9 @@ img.animated.pulse {
 }
 
 .call-to-action-btn {
-    border-bottom: 5px solid #8BC34A;
-    color: #8BC34A;
+    background-color: #EF4136;
+    padding: 0.8rem;
+    color: #ffffff;
     font-weight: bolder;
     font-size: 1.15rem !important;
 }
@@ -144,6 +145,10 @@ img.animated.pulse {
         margin-right: 0;
         padding: 10px 0;
     }
+
+    #call-to-action-button {
+        margin-bottom: 0.8rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -216,7 +221,7 @@ img.animated.pulse {
         padding-top: 0 !important;
     }
 
-    .testimonial{
+    .testimonial {
         padding-bottom: 0 !important;
     }
 }
