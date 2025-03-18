@@ -112,7 +112,7 @@ img.animated.pulse {
 }
 
 .navbar .navbar-nav .nav-link {
-    margin-right: 45px;
+    margin-left: 2rem;
     padding: 0;
     color: var(--bs-dark);
     font-weight: 500;
@@ -133,6 +133,12 @@ img.animated.pulse {
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
+}
+
+@media (max-width: 1164px) {
+    .navbar .navbar-nav .nav-link {
+        margin-left: 1rem !important;
+    }
 }
 
 @media (max-width: 991.98px) {
