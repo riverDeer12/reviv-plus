@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="rearange of reviv pharmacy locations">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="call to action for pharmacy web shop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1739791709965" duration="3285000" />
       <workItem from="1739824526598" duration="2963000" />
       <workItem from="1741793690465" duration="11172000" />
-      <workItem from="1742216495739" duration="10162000" />
+      <workItem from="1742216495739" duration="11761000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -192,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742226382098</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="call to action for pharmacy web shop">
+      <option name="closed" value="true" />
+      <created>1742227302303</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227302303</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +231,7 @@
     <MESSAGE value="changed call to action and linked in button" />
     <MESSAGE value="set call to action button" />
     <MESSAGE value="rearange of reviv pharmacy locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="rearange of reviv pharmacy locations" />
+    <MESSAGE value="call to action for pharmacy web shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="call to action for pharmacy web shop" />
   </component>
 </project>
