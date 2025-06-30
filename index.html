@@ -178,13 +178,15 @@
                href="https://ljekarna-pablo.hr/wehealth-reviv-plus-ublazavanje-mamurluka-30-kapsula-proizvod-6756/"
                target="_blank">
                 <img width="200" class="img img-fluid my-5" src="img/ljekarna-pablo.png" alt="">
-                <span class="call-to-action-btn mb-5">Kupi u Pablo ljekarni! <i class="fa fa-shopping-basket"></i></span>
+                <span class="call-to-action-btn mb-5">Kupi u Pablo ljekarni! <i
+                        class="fa fa-shopping-basket"></i></span>
             </a>
             <a class="d-inline-flex flex-column align-items-center mx-3" onclick="fbq('track','Lead')"
                href="https://pharmeria.hr/t/kategorije/n-a-s-l-o-v-n-i-c-a/cipobianco/reviv-plus"
                target="_blank">
                 <img width="220" class="img img-fluid mb-5" src="img/pharmeria-logo.svg" alt="">
-                <span class="call-to-action-btn mb-5">Kupi u Pharmeria ljekarni! <i class="fa fa-shopping-basket"></i></span></a>
+                <span class="call-to-action-btn mb-5">Kupi u Pharmeria ljekarni! <i
+                        class="fa fa-shopping-basket"></i></span></a>
             <a class="d-inline-flex flex-column align-items-center" onclick="fbq('track','Lead')"
                href="https://www.ljekarne-joukhadar.hr/catalogsearch/result/?q=C073362+C073363"
                target="_blank">
@@ -456,13 +458,15 @@
                            href="https://ljekarna-pablo.hr/wehealth-reviv-plus-ublazavanje-mamurluka-30-kapsula-proizvod-6756/"
                            target="_blank">
                             <img width="200" class="img img-fluid my-5" src="img/ljekarna-pablo.png" alt="">
-                            <span class="call-to-action-btn mb-5">Kupi u Pablo ljekarni! <i class="fa fa-shopping-basket"></i></span>
+                            <span class="call-to-action-btn mb-5">Kupi u Pablo ljekarni! <i
+                                    class="fa fa-shopping-basket"></i></span>
                         </a>
                         <a class="d-inline-flex flex-column align-items-center mx-3" onclick="fbq('track','Lead')"
                            href="https://pharmeria.hr/t/kategorije/n-a-s-l-o-v-n-i-c-a/cipobianco/reviv-plus"
                            target="_blank">
                             <img width="220" class="img img-fluid mb-5" src="img/pharmeria-logo.svg" alt="">
-                            <span class="call-to-action-btn mb-5">Kupi u Pharmeria ljekarni! <i class="fa fa-shopping-basket"></i></span></a>
+                            <span class="call-to-action-btn mb-5">Kupi u Pharmeria ljekarni! <i
+                                    class="fa fa-shopping-basket"></i></span></a>
                         <a class="d-inline-flex flex-column align-items-center" onclick="fbq('track','Lead')"
                            href="https://www.ljekarne-joukhadar.hr/catalogsearch/result/?q=C073362+C073363"
                            target="_blank">
@@ -964,6 +968,18 @@
 </div>
 <!-- Footer End -->
 
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>💥 VIKEND AKCIJA – SAMO U SRPNJU I KOLOVOZU!</h2>
+        <p><strong>Iskoristi -15% popusta na REVIV PLUS petkom i subotom ovog ljeta!</strong></p>
+        <p>👉 Uživaj u noćnom izlasku bez teških jutara.</p>
+        <p>👉 Kupi odmah online ili posjeti ljekarne koje sudjeluju u akciji.</p>
+        <p><em>(Nedjeljom su ljekarne zatvorene.)</em></p>
+    </div>
+</div>
+
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -991,6 +1007,18 @@
     gtag('js', new Date());
 
     gtag('config', 'G-H026L8ZCS2');
+</script>
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            document.getElementById("popup").style.display = "flex";
+        }, 10000);
+    };
+
+    // Close popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
 </script>
 </body>
 
