@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="new guid for style.css to override caching">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="gap on mobile mode between logos and buy buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -17,18 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "riverDeer12"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;riverDeer12&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/riverDeer12/reviv-plus",
-    "accountId": "53932b12-3ccc-41ed-9d82-b23c76a159b6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/riverDeer12/reviv-plus&quot;,
+    &quot;accountId&quot;: &quot;53932b12-3ccc-41ed-9d82-b23c76a159b6&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "production",
-    "last_opened_file_path": "/Users/riverdeer/Projects/reviv-plus",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;production&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/riverdeer/Projects/reviv-plus&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -72,7 +72,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -88,7 +88,13 @@
       <workItem from="1739791709965" duration="3285000" />
       <workItem from="1739824526598" duration="2963000" />
       <workItem from="1741793690465" duration="11172000" />
-      <workItem from="1742216495739" duration="13933000" />
+      <workItem from="1742216495739" duration="14574000" />
+      <workItem from="1742848044764" duration="672000" />
+      <workItem from="1743070104334" duration="2677000" />
+      <workItem from="1743518227281" duration="5586000" />
+      <workItem from="1744035949551" duration="2082000" />
+      <workItem from="1745834147666" duration="7078000" />
+      <workItem from="1751300984422" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -209,7 +215,79 @@
       <option name="project" value="LOCAL" />
       <updated>1742290451116</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="menu design bugfixing">
+      <option name="closed" value="true" />
+      <created>1742292600136</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742292600136</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added google tag for google analytics">
+      <option name="closed" value="true" />
+      <created>1742848100430</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742848100430</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added new pharmacy for web shop redirect:pharmeria">
+      <option name="closed" value="true" />
+      <created>1743070488273</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743070488273</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added meta pixel">
+      <option name="closed" value="true" />
+      <created>1743526240541</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743526240541</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added google tag manager">
+      <option name="closed" value="true" />
+      <created>1743529388216</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1743529388216</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added track lead for event on pharmeria or pablo web shop link">
+      <option name="closed" value="true" />
+      <created>1743779336605</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743779336605</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added buy buttons, and copied section above about section">
+      <option name="closed" value="true" />
+      <created>1745838812422</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1745838812422</updated>
+    </task>
+    <task id="LOCAL-00023" summary="new guid for overriding style.css">
+      <option name="closed" value="true" />
+      <created>1745839112818</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1745839112818</updated>
+    </task>
+    <task id="LOCAL-00024" summary="gap on mobile mode between logos and buy buttons">
+      <option name="closed" value="true" />
+      <created>1745839475354</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1745839475354</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +321,15 @@
     <MESSAGE value="rearange of reviv pharmacy locations" />
     <MESSAGE value="call to action for pharmacy web shop" />
     <MESSAGE value="new guid for style.css to override caching" />
-    <option name="LAST_COMMIT_MESSAGE" value="new guid for style.css to override caching" />
+    <MESSAGE value="menu design bugfixing" />
+    <MESSAGE value="added google tag for google analytics" />
+    <MESSAGE value="added new pharmacy for web shop redirect:pharmeria" />
+    <MESSAGE value="added meta pixel" />
+    <MESSAGE value="added google tag manager" />
+    <MESSAGE value="added track lead for event on pharmeria or pablo web shop link" />
+    <MESSAGE value="added buy buttons, and copied section above about section" />
+    <MESSAGE value="new guid for overriding style.css" />
+    <MESSAGE value="gap on mobile mode between logos and buy buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="gap on mobile mode between logos and buy buttons" />
   </component>
 </project>
