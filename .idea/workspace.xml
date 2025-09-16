@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="gap on mobile mode between logos and buy buttons">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added 5 more locations for ljekarne jadran">
+      <change afterPath="$PROJECT_DIR$/reviv_plus_publish.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,8 @@
       <workItem from="1743518227281" duration="5586000" />
       <workItem from="1744035949551" duration="2082000" />
       <workItem from="1745834147666" duration="7078000" />
-      <workItem from="1751300984422" duration="510000" />
+      <workItem from="1751300984422" duration="2110000" />
+      <workItem from="1751972719144" duration="2285000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -287,7 +287,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745839475354</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added popup window for summer sale">
+      <option name="closed" value="true" />
+      <created>1751301556389</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1751301556389</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added 5 more locations for ljekarne jadran">
+      <option name="closed" value="true" />
+      <created>1751974038103</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1751974038103</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +322,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished with contact section, need to insert about content put footer links and redesign footer bit more" />
     <MESSAGE value="working on content" />
     <MESSAGE value="merged changes from yestreday" />
     <MESSAGE value="finished with testimonials and footer, need to change about section" />
@@ -330,6 +345,8 @@
     <MESSAGE value="added buy buttons, and copied section above about section" />
     <MESSAGE value="new guid for overriding style.css" />
     <MESSAGE value="gap on mobile mode between logos and buy buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="gap on mobile mode between logos and buy buttons" />
+    <MESSAGE value="added popup window for summer sale" />
+    <MESSAGE value="added 5 more locations for ljekarne jadran" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 5 more locations for ljekarne jadran" />
   </component>
 </project>
