@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ReViv Plus — Plaćanje neuspješno</title>
+
+    <!-- Stripe (optional) -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nažalost, plaćanje nije uspjelo. Provjerite podatke ili pokušajte ponovno." />
+
+    <!-- Favicons (reuse your existing) -->
+    <link href="img/favicon.ico" rel="icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+    <link rel="manifest" href="img/site.webmanifest" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons + Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap + Your theme -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css?ver=acedae99-0454-4bfd-a132-7d2fe1f394c1" rel="stylesheet" />
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-W8FXD79P');</script>
+    <!-- End GTM -->
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+            t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1792141361356498');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1792141361356498&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel -->
+
+    <style>
+        /* Small failure-page tweaks without touching your main CSS */
+        .failure-hero {
+            background:
+                    radial-gradient(1200px 600px at 10% 10%, #ffecec 0, rgba(255, 255, 255, 0) 60%),
+                    radial-gradient(1000px 600px at 90% 0%, #fff6e6 0, rgba(255, 255, 255, 0) 60%),
+                    #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .receipt-card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+        }
+
+        .badge-failed {
+            letter-spacing: .06em;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .order-row + .order-row {
+            border-top: 1px dashed #e9ecef;
+        }
+
+        .subtle {
+            color: #6c757d;
+        }
+
+        .link-underline {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .text-danger-900 {
+            color: #7f1d1d;
+        }
+    </style>
+</head>
+
+<!-- GTM (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8FXD79P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End GTM (noscript) -->
+
+<body>
+<!-- Spinner -->
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-danger" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Učitavanje...</span>
+    </div>
+</div>
+
+<!-- Navbar -->
+<div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.html" class="navbar-brand">
+                <img height="58" src="img/footer_logo.png" alt="ReViv Plus" />
+            </a>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link">Naslovna</a>
+                    <a href="index.html#about" class="nav-item nav-link">O ReViv PLUS-u</a>
+                    <a href="index.html#benefits" class="nav-item nav-link">Prednosti</a>
+                    <a href="index.html#contact" class="nav-item nav-link">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero -->
+<div class="container-fluid hero-header failure-hero mb-5">
+    <div class="container">
+        <div class="row g-5 align-items-center py-5">
+            <div class="col-lg-8">
+                <h1 class="mb-3 wow fadeIn" data-wow-delay="0.1s">
+                    Nažalost, nismo mogli dovršiti vašu naplatu.
+                </h1>
+                <p class="lead subtle wow fadeIn" data-wow-delay="0.2s">
+                    Pokušajte ponovno ili upotrijebite drugu karticu/metodu plaćanja. Ako je iznos terećen, transakcija će biti automatski stornirana.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Details / Guidance -->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-9">
+            <div class="card receipt-card wow fadeIn" data-wow-delay="0.1s">
+                <div class="card-body p-4 p-md-5">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                        <div class="d-flex align-items-center">
+                            <img src="img/logo.png" alt="ReViv Plus" height="48" class="me-3" />
+                            <div>
+                                <h5 class="mb-0">Podaci o pokušaju plaćanja</h5>
+                                <small class="subtle">Narudžba nije potvrđena.</small>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="subtle">Broj sesije</div>
+                            <div id="order-id" class="fw-semibold">—</div>
+                        </div>
+                    </div>
+
+                    <!-- Customer + amounts (if poznato) -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="p-3 rounded border bg-light">
+                                <div class="subtle mb-1">Kupac</div>
+                                <div id="customer-name" class="fw-semibold">—</div>
+                                <div id="customer-email" class="subtle">—</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 rounded border bg-light">
+                                <div class="subtle mb-1">Iznos</div>
+                                <div class="d-flex align-items-baseline">
+                                    <div id="amount-total" class="display-6 me-2">—</div>
+                                    <div id="currency" class="subtle">—</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reason -->
+                    <div class="alert alert-danger d-flex align-items-start" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2 mt-1"></i>
+                        <div>
+                            <div class="fw-semibold mb-1">Razlog (ako je dostupan)</div>
+                            <div id="failure-reason" class="mb-0">Nije dostupan detalj o grešci.</div>
+                        </div>
+                    </div>
+
+                    <!-- Helpful next steps -->
+                    <div class="mb-4">
+                        <h6 class="text-danger-900">Što možete učiniti:</h6>
+                        <ul class="mb-0 subtle">
+                            <li>Provjerite podatke kartice i raspoloživo stanje.</li>
+                            <li>Omogućite internetska plaćanja i 3‑D Secure u aplikaciji banke.</li>
+                            <li>Pokušajte s drugom karticom ili odaberite drugu metodu plaćanja.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="index.html" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-2"></i>Natrag na početnu
+                        </a>
+                        <a id="retry" href="#" class="btn btn-danger">
+                            <i class="bi bi-arrow-repeat me-2"></i>Pokušaj ponovno plaćanje
+                        </a>
+                    </div>
+
+                    <!-- Help -->
+                    <div class="mt-4 small subtle">
+                        Ako i dalje imate poteškoća, pošaljite nam <a class="link-underline" href="mailto:info@capobianco.hr">e‑poruku</a> s brojem sesije i snimkom zaslona poruke iz banke.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional: Order summary if line items are dostupni -->
+            <div id="line-items-card" class="card receipt-card mt-4 d-none">
+                <div class="card-body p-4">
+                    <h6 class="mb-3">Pregled košarice</h6>
+                    <div id="line-items" class="mb-2">
+                        <div class="order-row d-flex justify-content-between py-3">
+                            <div class="subtle">Učitavanje stavki…</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer Start (reused) -->
+<div class="container-fluid bg-white footer">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-6 wow fadeIn text-center" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="img/logo.png" alt="" />
+                </a>
+                <h5 class="mt-2">Ako ti se zalomi... preživi drugi dan.</h5>
+            </div>
+            <div class="col-md-6 col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4">Potražite nas i na društvenim mrežama...</h5>
+                <div class="d-flex pt-3">
+                    <a id="instagram" class="btn me-3 social-icon" href="https://www.instagram.com/revivplus.hr/?igsh=dzNxZDNrZDVzaWQw#" target="_blank"><i class="fab fa-instagram fa-3x"></i>
+                        Instagram</a>
+                    <a id="facebook" class="btn me-3 social-icon" href="https://www.facebook.com/Revivplus" target="_blank"><i class="fab fa-facebook-f fa-3x"></i>
+                        Facebook</a>
+                    <a id="linkedin" class="btn social-icon" href=""><i class="fab fa-linkedin-in fa-3x"></i>
+                        LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; Copyright <a class="border-bottom" href="https://rdd.software" target="_blank">rdd.software</a>
+                    <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+<!-- JS libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics (gtag) for failure event -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H026L8ZCS2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H026L8ZCS2');
+</script>
+
+<!-- Failure Page Logic -->
+<script>
+    // ---- SETTINGS ----
+    const API_BASE = 'https://localhost:7173';
+    // Expecting same endpoint as success page; backend should include failure details if available
+    // GET /api/payments/checkout-session?sessionId=cs_...
+
+    const qs = new URLSearchParams(location.search);
+    const sessionId = qs.get('session_id');
+
+    const $ = (id) => document.getElementById(id);
+    const spinner = $('spinner');
+    const orderIdEl = $('order-id');
+    const nameEl = $('customer-name');
+    const emailEl = $('customer-email');
+    const amountEl = $('amount-total');
+    const currencyEl = $('currency');
+    const reasonEl = $('failure-reason');
+    const retryBtn = $('retry');
+    const lineItemsCard = $('line-items-card');
+    const itemsEl = $('line-items');
+
+    function formatAmountMinor(amountMinor, currency) {
+        try {
+            return new Intl.NumberFormat('hr-HR', {
+                style: 'currency',
+                currency: (currency || 'EUR').toUpperCase()
+            }).format((amountMinor || 0) / 100);
+        } catch {
+            return `${(amountMinor || 0) / 100} ${currency || ''}`.trim();
+        }
+    }
+
+    function renderItems(items, currency) {
+        if (!Array.isArray(items) || items.length === 0) {
+            itemsEl.innerHTML = '<div class="order-row d-flex justify-content-between py-3"><div>ReViv Plus</div><div class="subtle">1×</div></div>';
+            return;
+        }
+        itemsEl.innerHTML = items.map(li => `
+        <div class="order-row d-flex justify-content-between align-items-center py-3">
+          <div>
+            <div class="fw-semibold">${li.description || 'Stavka'}</div>
+            <div class="small subtle">${li.quantity || 1} × ${formatAmountMinor(li.amount_subtotal, currency)}</div>
+          </div>
+          <div class="fw-semibold">${formatAmountMinor(li.amount_subtotal, currency)}</div>
+        </div>
+      `).join('');
+    }
+
+    function trackFailure(payload, reason) {
+        // Avoid double-firing if user refreshes
+        const key = `payment_failed_tracked_${payload.id || sessionId}`;
+        if (sessionStorage.getItem(key)) return;
+        sessionStorage.setItem(key, '1');
+
+        // Meta Pixel (custom event)
+        try {
+            fbq('trackCustom', 'PaymentFailed', {
+                value: (payload.amount_total || 0) / 100,
+                currency: (payload.currency || 'EUR').toUpperCase(),
+                reason: reason || 'unknown'
+            });
+        } catch (e) { /* noop */ }
+
+        // GA4 (recommended: add_payment_info with success=false)
+        try {
+            gtag('event', 'add_payment_info', {
+                success: false,
+                value: (payload.amount_total || 0) / 100,
+                currency: (payload.currency || 'EUR').toUpperCase(),
+                session_id: payload.id || sessionId,
+                failure_reason: reason || 'unknown'
+            });
+        } catch (e) { /* noop */ }
+    }
+
+    function inferFailureReason(data) {
+        // Try a few common shapes from Stripe or your backend
+        return (
+            data.failure_message ||
+            data.last_payment_error?.message ||
+            data.payment_intent?.last_payment_error?.message ||
+            data.cancellation_reason ||
+            (data.payment_status && data.payment_status !== 'paid' ? `Status: ${data.payment_status}` : '') ||
+            'Transakcija je odbijena. Molimo pokušajte ponovno.'
+        );
+    }
+
+    async function hydrate() {
+        new WOW().init();
+        try {
+            if (!sessionId) {
+                orderIdEl.textContent = '—';
+                nameEl.textContent = 'Kupac';
+                emailEl.textContent = '—';
+                amountEl.textContent = '—';
+                currencyEl.textContent = '';
+                reasonEl.textContent = 'Nije pronađena sesija plaćanja.';
+                retryBtn.setAttribute('href', 'index.html#kupnja');
+                return;
+            }
+
+            const res = await fetch(`${API_BASE}/api/payments/checkout-session?sessionId=${encodeURIComponent(sessionId)}`, {
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!res.ok) throw new Error('Greška pri dohvaćanju sesije.');
+            const data = await res.json();
+
+            // Basic fill
+            orderIdEl.textContent = data.id || sessionId;
+            nameEl.textContent = data.customer_name || 'Kupac';
+            emailEl.textContent = data.customer_email || '';
+            amountEl.textContent = formatAmountMinor(data.amount_total, data.currency);
+            currencyEl.textContent = '';
+
+            // Items (optional)
+            if (data.line_items && data.line_items.length) {
+                lineItemsCard.classList.remove('d-none');
+                renderItems(data.line_items, data.currency);
+            }
+
+            const reason = inferFailureReason(data);
+            reasonEl.textContent = reason;
+
+            // Retry URL strategy: prefer a backend-provided URL, else go home/CTA
+            const retryUrl = data.retry_url || data.url || 'index.html#kupnja';
+            retryBtn.setAttribute('href', retryUrl);
+
+            // Track failure
+            trackFailure(data, reason);
+        } catch (err) {
+            console.error(err);
+            reasonEl.textContent = 'Ne možemo prikazati detalje. Molimo pokušajte ponovno ili nas kontaktirajte.';
+            retryBtn.setAttribute('href', 'index.html#kupnja');
+        } finally {
+            spinner.classList.remove('show');
+        }
+    }
+
+    hydrate();
+</script>
+</body>
+
+</html>
