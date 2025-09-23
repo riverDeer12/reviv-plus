@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="removed popup">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector">
       <change afterPath="$PROJECT_DIR$/publish.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1751972719144" duration="2285000" />
       <workItem from="1758012700107" duration="2181000" />
       <workItem from="1758561377658" duration="3123000" />
-      <workItem from="1758566479847" duration="3850000" />
+      <workItem from="1758566479847" duration="11762000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -322,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758012773691</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector">
+      <option name="closed" value="true" />
+      <created>1758574550616</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1758574550616</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +348,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="merged changes from yestreday" />
     <MESSAGE value="finished with testimonials and footer, need to change about section" />
     <MESSAGE value="added new pictures" />
     <MESSAGE value="fixed responsive of container hero images" />
@@ -366,6 +372,7 @@
     <MESSAGE value="added popup window for summer sale" />
     <MESSAGE value="added 5 more locations for ljekarne jadran" />
     <MESSAGE value="removed popup" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed popup" />
+    <MESSAGE value="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector" />
   </component>
 </project>

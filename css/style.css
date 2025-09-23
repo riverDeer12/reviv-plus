@@ -75,6 +75,15 @@ img.animated.pulse {
     font-size: 1.15rem !important;
 }
 
+.add-to-cart-btn {
+    background-color: #EF4136;
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 1.15rem !important;
+    cursor: pointer;
+}
+
 .text-red {
     color: #EF4136 !important;
 }
@@ -403,6 +412,33 @@ img.animated.pulse {
     background: var(--bs-primary);
 }
 
+.product-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.product-row img {
+    width: 6rem;
+    height: auto;
+    margin-right: 15px;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-description {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 
 /*** Testimonial ***/
 .testimonial {
@@ -621,4 +657,25 @@ img.animated.pulse {
     right: 15px;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Toast Message */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .3s ease, transform .3s ease;
+    z-index: 9999;
+    font-size: 14px;
+}
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
