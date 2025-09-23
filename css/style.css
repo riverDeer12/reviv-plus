@@ -76,7 +76,34 @@ img.animated.pulse {
 }
 
 .add-to-cart-btn {
+    background-color: #8DC63F;
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 1.15rem !important;
+    cursor: pointer;
+}
+
+.go-to-payment-btn {
     background-color: #EF4136;
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 1.15rem !important;
+    cursor: pointer;
+}
+
+.clear-shopping-cart-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 1.15rem !important;
+    cursor: pointer;
+}
+
+.go-to-shopping-cart-btn {
+    background-color: rgb(141, 198, 63);
     padding: 0.8rem;
     color: #ffffff;
     font-weight: bolder;
@@ -108,15 +135,14 @@ img.animated.pulse {
     background-color: #8DC63F !important;
 }
 
-.pablo-buy-button{
+.pablo-buy-button {
     height: 60px;
     padding: 0 40px;
     font-size: 20px;
     line-height: 24px;
     font-weight: bold;
     font-family: "Diavlo", Arial, Helvetica, sans-serif;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -131,7 +157,7 @@ img.animated.pulse {
     -webkit-tap-highlight-color: transparent;
 }
 
-.pharmeria-buy-button{
+.pharmeria-buy-button {
     position: relative;
     cursor: pointer;
     display: inline-flex;
@@ -155,7 +181,7 @@ img.animated.pulse {
     border-color: #1ababb;
 }
 
-.joukhadar-buy-button{
+.joukhadar-buy-button {
     color: #e8edeb;
     border-color: transparent;
     background: #009440;
@@ -662,19 +688,24 @@ img.animated.pulse {
 /* Toast Message */
 .toast {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #28a745;
+    bottom: 2rem;
+    right: 3rem;
+    left: 2rem;
+    background: rgb(141, 198, 63);
     color: white;
-    padding: 10px 16px;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    padding: 3rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity .3s ease, transform .3s ease;
     z-index: 9999;
-    font-size: 14px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    width: 85%;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
 }
+
 .toast.show {
     opacity: 1;
     transform: translateY(0);
