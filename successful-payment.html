@@ -279,7 +279,6 @@
     //       {"description":"ReViv Plus (30 kapsula)","quantity":1,"amount_subtotal":1999}
     //   ]
     // }
-    // ----------------------------------------------------
 
     const qs = new URLSearchParams(location.search);
     const sessionId = qs.get('session_id');
@@ -367,7 +366,7 @@
                 return;
             }
 
-            const res = await fetch(`${API_BASE}/api/payments/checkout-session?sessionId=${encodeURIComponent(sessionId)}`, {
+            const res = await fetch(`${API_BASE}/api/payments/checkout-session/${encodeURIComponent(sessionId)}`, {
                 headers: { 'Accept': 'application/json' }
             });
 

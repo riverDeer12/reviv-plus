@@ -123,6 +123,9 @@
                     <a id="call-to-action-button" href="#order" class="nav-item nav-link">
                         <span class="call-to-action-btn">Kupite ReViv Plus <i class="fa fa-shopping-cart"></i></span>
                     </a>
+<!--                    <a href="#order" class="nav-item nav-link">
+                        <span class="call-to-action-btn">Košarica <i class="fa fa-shopping-basket"></i></span>
+                    </a>-->
                 </div>
             </div>
         </nav>
@@ -457,9 +460,12 @@
                         <span id="clearShoppingCartBtn"
                               class="clear-shopping-cart-btn my-1">Isprazni košaricu  <i
                                 class="fa fa-shopping-basket"></i></span>
-                        <span
+                        <span id="showShoppingCartBtn"
                                 class="go-to-shopping-cart-btn my-1">Pregled košarice  <i
                                 class="fa fa-shopping-basket"></i></span>
+
+                        <div class="row my-3" id="shopping-cart" hidden></div>
+
                         <span id="buy"
                               class="go-to-payment-btn my-1">Idi na plaćanje  <i
                                 class="fa fa-credit-card"></i></span>
@@ -1019,6 +1025,8 @@
                 }
                 saveCart();
                 showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-plus fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno dodan u košaricu.`);
+                loadCart();
+                renderCart();
             }
 
             function showToast(message) {
@@ -1037,7 +1045,7 @@
 
             async function getProductPrices() {
                 try {
-                    const res = await fetch('https://localhost:7173/api/products/stripe', {
+                    const res = await fetch(`${API_BASE}/api/products/stripe`, {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify({
@@ -1085,21 +1093,132 @@
 
             document.getElementById('clearShoppingCartBtn').addEventListener('click', async () => {
                 localStorage.removeItem('cart');
-                cart = { items: [] };
+                cart = {items: []};
                 saveCart();
                 showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-minus fa-2x ms-2" aria-hidden="true"></i>Proizvodi su uspješno uklonjeni iz košarice.`);
+                loadCart();
+                renderCart();
             })
         });
+    </script>
+    <!-- Shopping Cart Management -->
+
+    <!-- Shopping Cart Container -->
+    <script>
+
+        const CART_KEY = "cart";
+
+        const API_BASE = 'https://localhost:7173';
+
+        const cartDiv = document.getElementById("shopping-cart");
+        const toggleBtn = document.getElementById("showShoppingCartBtn");
+
+        function parseEuroPrice(text) {
+            // Handles "33,15 €" or "1.234,56 €"
+            if (typeof text !== "string") return 0;
+            const cleaned = text
+                .replace(/\s|€|\u00A0/g, "") // remove spaces, € and non-breaking space
+                .replace(/\./g, "")          // remove thousands separators
+                .replace(",", ".");          // convert decimal comma to dot
+            const n = Number.parseFloat(cleaned);
+            return Number.isFinite(n) ? n : 0;
+        }
+
+        function formatEUR(value) {
+            return new Intl.NumberFormat("hr-HR", { style: "currency", currency: "EUR" }).format(value);
+        }
+
+        function loadCart() {
+            try {
+                const raw = localStorage.getItem(CART_KEY);
+                if (!raw) return { items: [] };
+                const data = JSON.parse(raw);
+                if (!data || !Array.isArray(data.items)) return { items: [] };
+                return data;
+            } catch {
+                return { items: [] };
+            }
+        }
+
+        function renderCart() {
+            const { items } = loadCart();
+
+            if (!items.length) {
+                cartDiv.innerHTML = `
+          <h2>Vaša košarica</h2>
+          <p class="muted">Košarica je prazna.</p>
+        `;
+                return;
+            }
+
+            let rows = "";
+            let total = 0;
+
+            for (const it of items) {
+                const name = it.productName ?? it.productId ?? "Proizvod";
+                const unitPrice = parseEuroPrice(it.productPrice);
+                const qty = Number(it.quantity) || 0;
+                const line = unitPrice * qty;
+                total += line;
+
+                rows += `
+          <tr>
+            <td>${name}</td>
+            <td>${qty}</td>
+            <td>${formatEUR(unitPrice)}</td>
+            <td>${formatEUR(line)}</td>
+          </tr>
+        `;
+            }
+
+            cartDiv.innerHTML = `
+        <h2>Vaša košarica</h2>
+        <table aria-label="Sadržaj košarice">
+          <thead>
+            <tr>
+              <th>Naziv proizvoda</th>
+              <th>Količina</th>
+              <th>Cijena proizvoda</th>
+              <th>Cijena</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"></td>
+              <td>Ukupno: ${formatEUR(total)}</td>
+            </tr>
+          </tfoot>
+        </table>
+      `;
+        }
+
+        // Toggle show/hide
+        toggleBtn.addEventListener("click", () => {
+            const willShow = cartDiv.hasAttribute("hidden");
+            cartDiv.toggleAttribute("hidden");
+            toggleBtn.setAttribute("aria-expanded", String(willShow));
+            toggleBtn.innerHTML = willShow ? "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>" : "Prikaži košaricu <i class=\"fa fa-shopping-basket\"></i>";
+            if (willShow) renderCart(); // (re)render on show to reflect any storage changes
+        });
+
+        if (loadCart().items.length) {
+          cartDiv.removeAttribute("hidden");
+          toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
+          toggleBtn.setAttribute("aria-expanded", "true");
+          renderCart();
+        }
     </script>
 
     <!-- Stripe Connector -->
     <script>
-
         const stripe = Stripe('pk_test_51RHmsXARY6iIldCB99XK6sNUHMhIPqJTXUWEczue4Tm5eDUYfWnNLfZJgB4UmjDeHXaxtfLUkjiyEayve4sMyhUo008T9IBRfy');
 
         document.getElementById('buy').addEventListener('click', async () => {
             try {
-                const res = await fetch('https://localhost:7173/api/payments/reviv-plus', {
+                const res = await fetch(`${API_BASE}/api/payments/reviv-plus`, {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: localStorage.getItem("cart")
