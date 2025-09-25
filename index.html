@@ -1179,9 +1179,15 @@
           <tr>
             <td>${name}</td>
             <td>
-                <button data-product-price="${it.productPrice}" data-product-id="${it.productId}" class="remove-product-quantity-btn">-</button>
+              <button type="button" data-product-price="${it.productPrice}" data-product-id="${it.productId}"
+                      class="remove-product-quantity-btn quantity-btn">
+                    <i class="bi bi-dash"></i>
+                </button>
                     ${qty}
-                <button data-product-price="${it.productPrice}" data-product-id="${it.productId}" class="add-product-quantity-btn">+</button>
+                <button type="button" data-product-price="${it.productPrice}" data-product-id="${it.productId}"
+                        class="add-product-quantity-btn quantity-btn">
+                    <i class="bi bi-plus"></i>
+                </button>
             <td>${formatEUR(unitPrice)}</td>
             <td>${formatEUR(line)}</td>
           </tr>
