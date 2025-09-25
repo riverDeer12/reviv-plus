@@ -123,9 +123,9 @@
                     <a id="call-to-action-button" href="#order" class="nav-item nav-link">
                         <span class="call-to-action-btn">Kupite ReViv Plus <i class="fa fa-shopping-cart"></i></span>
                     </a>
-<!--                    <a href="#order" class="nav-item nav-link">
-                        <span class="call-to-action-btn">Košarica <i class="fa fa-shopping-basket"></i></span>
-                    </a>-->
+                    <!--                    <a href="#order" class="nav-item nav-link">
+                                            <span class="call-to-action-btn">Košarica <i class="fa fa-shopping-basket"></i></span>
+                                        </a>-->
                 </div>
             </div>
         </nav>
@@ -461,7 +461,7 @@
                               class="clear-shopping-cart-btn my-1">Isprazni košaricu  <i
                                 class="fa fa-shopping-basket"></i></span>
                         <span id="showShoppingCartBtn"
-                                class="go-to-shopping-cart-btn my-1">Pregled košarice  <i
+                              class="go-to-shopping-cart-btn my-1">Pregled košarice  <i
                                 class="fa fa-shopping-basket"></i></span>
 
                         <div class="row my-3" id="shopping-cart" hidden></div>
@@ -1008,6 +1008,14 @@
 
     <!-- Shopping Cart Management -->
     <script>
+
+        const CART_KEY = "cart";
+
+        const API_BASE = 'https://localhost:7173';
+
+        const cartDiv = document.getElementById("shopping-cart");
+        const toggleBtn = document.getElementById("showShoppingCartBtn");
+
         document.addEventListener("DOMContentLoaded", function () {
             const CART_KEY = "cart";
             let cart = JSON.parse(localStorage.getItem(CART_KEY)) || {items: []};
@@ -1025,8 +1033,27 @@
                 }
                 saveCart();
                 showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-plus fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno dodan u košaricu.`);
-                loadCart();
-                renderCart();
+                loadCartItems();
+                renderCartItems();
+            }
+
+            function removeFromCart(productId) {
+                const existing = cart.items.find(item => item.productId === productId);
+
+                if (!existing) {
+                    return;
+                }
+
+                if(existing.quantity === 1) {
+                    cart.items = cart.items.filter(item => item.productId !== productId);
+                } else{
+                    existing.quantity--;
+                }
+
+                saveCart();
+                showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno uklonjen iz košarice.`);
+                loadCartItems();
+                renderCartItems();
             }
 
             function showToast(message) {
@@ -1095,83 +1122,73 @@
                 localStorage.removeItem('cart');
                 cart = {items: []};
                 saveCart();
-                showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-minus fa-2x ms-2" aria-hidden="true"></i>Proizvodi su uspješno uklonjeni iz košarice.`);
-                loadCart();
-                renderCart();
+                showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvodi su uspješno uklonjeni iz košarice.`);
+                loadCartItems();
+                renderCartItems();
             })
-        });
-    </script>
-    <!-- Shopping Cart Management -->
 
-    <!-- Shopping Cart Container -->
-    <script>
-
-        const CART_KEY = "cart";
-
-        const API_BASE = 'https://localhost:7173';
-
-        const cartDiv = document.getElementById("shopping-cart");
-        const toggleBtn = document.getElementById("showShoppingCartBtn");
-
-        function parseEuroPrice(text) {
-            // Handles "33,15 €" or "1.234,56 €"
-            if (typeof text !== "string") return 0;
-            const cleaned = text
-                .replace(/\s|€|\u00A0/g, "") // remove spaces, € and non-breaking space
-                .replace(/\./g, "")          // remove thousands separators
-                .replace(",", ".");          // convert decimal comma to dot
-            const n = Number.parseFloat(cleaned);
-            return Number.isFinite(n) ? n : 0;
-        }
-
-        function formatEUR(value) {
-            return new Intl.NumberFormat("hr-HR", { style: "currency", currency: "EUR" }).format(value);
-        }
-
-        function loadCart() {
-            try {
-                const raw = localStorage.getItem(CART_KEY);
-                if (!raw) return { items: [] };
-                const data = JSON.parse(raw);
-                if (!data || !Array.isArray(data.items)) return { items: [] };
-                return data;
-            } catch {
-                return { items: [] };
+            function parseEuroPrice(text) {
+                // Handles "33,15 €" or "1.234,56 €"
+                if (typeof text !== "string") return 0;
+                const cleaned = text
+                    .replace(/\s|€|\u00A0/g, "") // remove spaces, € and non-breaking space
+                    .replace(/\./g, "")          // remove thousands separators
+                    .replace(",", ".");          // convert decimal comma to dot
+                const n = Number.parseFloat(cleaned);
+                return Number.isFinite(n) ? n : 0;
             }
-        }
 
-        function renderCart() {
-            const { items } = loadCart();
+            function formatEUR(value) {
+                return new Intl.NumberFormat("hr-HR", {style: "currency", currency: "EUR"}).format(value);
+            }
 
-            if (!items.length) {
-                cartDiv.innerHTML = `
+            function loadCartItems() {
+                try {
+                    const raw = localStorage.getItem(CART_KEY);
+                    if (!raw) return {items: []};
+                    const data = JSON.parse(raw);
+                    if (!data || !Array.isArray(data.items)) return {items: []};
+                    return data;
+                } catch {
+                    return {items: []};
+                }
+            }
+
+            function renderCartItems() {
+                const {items} = loadCartItems();
+
+                if (!items.length) {
+                    cartDiv.innerHTML = `
           <h2>Vaša košarica</h2>
           <p class="muted">Košarica je prazna.</p>
         `;
-                return;
-            }
+                    return;
+                }
 
-            let rows = "";
-            let total = 0;
+                let rows = "";
+                let total = 0;
 
-            for (const it of items) {
-                const name = it.productName ?? it.productId ?? "Proizvod";
-                const unitPrice = parseEuroPrice(it.productPrice);
-                const qty = Number(it.quantity) || 0;
-                const line = unitPrice * qty;
-                total += line;
+                for (const it of items) {
+                    const name = it.productName ?? it.productId ?? "Proizvod";
+                    const unitPrice = parseEuroPrice(it.productPrice);
+                    const qty = Number(it.quantity) || 0;
+                    const line = unitPrice * qty;
+                    total += line;
 
-                rows += `
+                    rows += `
           <tr>
             <td>${name}</td>
-            <td>${qty}</td>
+            <td>
+                <button data-product-price="${it.productPrice}" data-product-id="${it.productId}" class="remove-product-quantity-btn">-</button>
+                    ${qty}
+                <button data-product-price="${it.productPrice}" data-product-id="${it.productId}" class="add-product-quantity-btn">+</button>
             <td>${formatEUR(unitPrice)}</td>
             <td>${formatEUR(line)}</td>
           </tr>
         `;
-            }
+                }
 
-            cartDiv.innerHTML = `
+                cartDiv.innerHTML = `
         <h2>Vaša košarica</h2>
         <table aria-label="Sadržaj košarice">
           <thead>
@@ -1193,23 +1210,44 @@
           </tfoot>
         </table>
       `;
-        }
+            }
 
-        // Toggle show/hide
-        toggleBtn.addEventListener("click", () => {
-            const willShow = cartDiv.hasAttribute("hidden");
-            cartDiv.toggleAttribute("hidden");
-            toggleBtn.setAttribute("aria-expanded", String(willShow));
-            toggleBtn.innerHTML = willShow ? "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>" : "Prikaži košaricu <i class=\"fa fa-shopping-basket\"></i>";
-            if (willShow) renderCart(); // (re)render on show to reflect any storage changes
+            // Toggle show/hide
+            toggleBtn.addEventListener("click", () => {
+                const willShow = cartDiv.hasAttribute("hidden");
+                cartDiv.toggleAttribute("hidden");
+                toggleBtn.setAttribute("aria-expanded", String(willShow));
+                toggleBtn.innerHTML = willShow ? "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>" : "Prikaži košaricu <i class=\"fa fa-shopping-basket\"></i>";
+                if (willShow) renderCartItems(); // (re)render on show to reflect any storage changes
+            });
+
+            if (loadCartItems().items.length) {
+                cartDiv.removeAttribute("hidden");
+                toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
+                toggleBtn.setAttribute("aria-expanded", "true");
+                renderCartItems();
+            }
+
+            document.addEventListener("click", (event) => {
+                const addBtn = event.target.closest(".add-product-quantity-btn");
+                if (addBtn) {
+                    const productId = addBtn.getAttribute("data-product-id");
+                    const productPrice = addBtn.getAttribute("data-product-price");
+                    const productName = addBtn.closest(".product-row")
+                        ?.querySelector(".product-description")
+                        ?.textContent.trim() || "Proizvod";
+                    addToCart(productId, productName, productPrice);
+                    return;
+                }
+
+                const removeBtn = event.target.closest(".remove-product-quantity-btn");
+                if (removeBtn) {
+                    const productId = removeBtn.getAttribute("data-product-id");
+                    removeFromCart(productId);
+                    return;
+                }
+            });
         });
-
-        if (loadCart().items.length) {
-          cartDiv.removeAttribute("hidden");
-          toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
-          toggleBtn.setAttribute("aria-expanded", "true");
-          renderCart();
-        }
     </script>
 
     <!-- Stripe Connector -->

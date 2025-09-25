@@ -2,17 +2,17 @@
 <html lang="hr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>ReViv Plus — Hvala na kupnji!</title>
 
     <!-- Stripe (not required to render, but handy if you add portal/etc.) -->
     <script src="https://js.stripe.com/v3/"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hvala na kupnji ReViv Plus. Vaša narudžba je uspješno zaprimljena." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Hvala na kupnji ReViv Plus. Vaša narudžba je uspješno zaprimljena."/>
 
     <!-- Favicons (reuse your existing) -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/favicon.ico" rel="icon"/>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -36,21 +36,39 @@
     <link href="css/style.css?ver=acedae99-0454-4bfd-a132-7d2fe1f394c1" rel="stylesheet">
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-W8FXD79P');</script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W8FXD79P');</script>
     <!-- End GTM -->
 
     <!-- Meta Pixel -->
     <script>
         !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
-            t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1792141361356498');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=1792141361356498&ev=PageView&noscript=1" /></noscript>
+                   src="https://www.facebook.com/tr?id=1792141361356498&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
 
     <style>
@@ -61,22 +79,35 @@
             #ffffff;
             border-bottom: 1px solid rgba(0, 0, 0, .05);
         }
+
         .receipt-card {
             border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
         }
+
         .badge-paid {
             letter-spacing: .06em;
         }
-        .order-row + .order-row { border-top: 1px dashed #e9ecef; }
-        .subtle { color: #6c757d; }
-        .link-underline { text-decoration: underline; text-underline-offset: 2px; }
+
+        .order-row + .order-row {
+            border-top: 1px dashed #e9ecef;
+        }
+
+        .subtle {
+            color: #6c757d;
+        }
+
+        .link-underline {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
     </style>
 </head>
 
 <!-- GTM (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8FXD79P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8FXD79P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End GTM (noscript) -->
 
@@ -96,7 +127,8 @@
             <a href="index.html" class="navbar-brand">
                 <img height="58" src="img/footer_logo.png" alt="ReViv Plus">
             </a>
-            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -189,7 +221,8 @@
 
                     <!-- Help -->
                     <div class="mt-4 small subtle">
-                        Niste primili e-mail? Provjerite <span class="fw-semibold">Promocije/Spam</span> ili nas kontaktirajte na
+                        Niste primili e-mail? Provjerite <span class="fw-semibold">Promocije/Spam</span> ili nas
+                        kontaktirajte na
                         <a class="link-underline" href="mailto:info@capobianco.hr">info@capobianco.hr</a>.
                     </div>
                 </div>
@@ -255,30 +288,17 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H026L8ZCS2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-H026L8ZCS2');
 </script>
 
-<!-- Success Page Logic -->
 <script>
-    // ---- SETTINGS (adjust endpoints to your server) ----
     const API_BASE = 'https://localhost:7173';
-    // Endpoint should return order summary for a Checkout session:
-    // GET /api/payments/checkout-session?sessionId=cs_...
-    // Response example:
-    // {
-    //   "id":"cs_123",
-    //   "payment_status":"paid",
-    //   "currency":"eur",
-    //   "amount_total": 1999,               // in cents
-    //   "customer_email":"john@doe.com",
-    //   "customer_name":"John Doe",
-    //   "invoice_pdf":"https://files.stripe.com/...",
-    //   "line_items":[
-    //       {"description":"ReViv Plus (30 kapsula)","quantity":1,"amount_subtotal":1999}
-    //   ]
-    // }
 
     const qs = new URLSearchParams(location.search);
     const sessionId = qs.get('session_id');
@@ -293,45 +313,64 @@
     const itemsEl = el('line-items');
     const invoiceBtn = el('invoice-link');
 
-    function formatAmountMinor(amountMinor, currency) {
-        try {
-            return new Intl.NumberFormat('hr-HR', {
-                style: 'currency',
-                currency: (currency || 'EUR').toUpperCase()
-            }).format((amountMinor || 0) / 100);
-        } catch {
-            return `${(amountMinor || 0) / 100} ${currency || ''}`.trim();
-        }
+    // Clear shopping cart after successful payment
+    localStorage.removeItem('cart');
+
+    function parseEuroStringToNumber(amountStr) {
+        if (typeof amountStr !== 'string') return 0;
+        // remove non-digit separators except comma and dot
+        const cleaned = amountStr.replace(/[^\d,.-]/g, '').replace(/\./g, '').replace(',', '.');
+        const val = parseFloat(cleaned);
+        return isNaN(val) ? 0 : val;
+    }
+
+    // Return the display string as-is (already nicely formatted like "33,15 €")
+    function displayAmount(amountStr) {
+        return amountStr || '—';
     }
 
     function renderItems(items, currency) {
         if (!Array.isArray(items) || items.length === 0) {
-            itemsEl.innerHTML = '<div class="order-row d-flex justify-content-between py-3"><div>ReViv Plus</div><div class="subtle">1×</div></div>';
+            itemsEl.innerHTML =
+                '<div class="order-row d-flex justify-content-between py-3"><div>ReViv Plus</div><div class="subtle">1×</div></div>';
             return;
         }
         itemsEl.innerHTML = items.map(li => `
-        <div class="order-row d-flex justify-content-between align-items-center py-3">
-          <div>
-            <div class="fw-semibold">${li.description || 'Stavka'}</div>
-            <div class="small subtle">${li.quantity || 1} × ${formatAmountMinor(li.amount_subtotal, currency)}</div>
-          </div>
-          <div class="fw-semibold">${formatAmountMinor(li.amount_subtotal, currency)}</div>
+      <div class="order-row d-flex justify-content-between align-items-center py-3">
+        <div>
+          <div class="fw-semibold">${li.description || 'Stavka'}</div>
+          <div class="small subtle">${li.quantity || 1} × ${displayAmount(li.unitAmount || li.amountSubtotal)}</div>
         </div>
-      `).join('');
+        <div class="fw-semibold">${displayAmount(li.amountTotal || li.amountSubtotal)}</div>
+      </div>
+    `).join('');
+    }
+
+    // Make a lightweight slug from description to act as an item_id for pixels
+    function slugify(str) {
+        return String(str || 'reviv-plus')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/(^-|-$)/g, '') || 'reviv-plus';
     }
 
     function firePurchaseTracking(payload) {
-        // Avoid double-firing if user refreshes
-        const key = `purchase_tracked_${payload.id}`;
+        const key = `purchase_tracked_${payload.sessionId}`;
         if (sessionStorage.getItem(key)) return;
         sessionStorage.setItem(key, '1');
+
+        const totalValue = parseEuroStringToNumber(payload.amountTotal);
+        const currency = (payload.currency || 'EUR').toUpperCase();
 
         // Meta Pixel
         try {
             fbq('track', 'Purchase', {
-                value: (payload.amount_total || 0) / 100,
-                currency: (payload.currency || 'EUR').toUpperCase(),
-                contents: (payload.line_items || []).map(li => ({ id: li.price_id || li.sku || 'reviv-plus', quantity: li.quantity || 1 })),
+                value: totalValue,
+                currency,
+                contents: (payload.lineItems || []).map(li => ({
+                    id: slugify(li.description),
+                    quantity: li.quantity || 1
+                })),
                 content_type: 'product'
             });
         } catch (e) { /* noop */ }
@@ -339,14 +378,15 @@
         // GA4
         try {
             gtag('event', 'purchase', {
-                transaction_id: payload.id,
-                value: (payload.amount_total || 0) / 100,
-                currency: (payload.currency || 'EUR').toUpperCase(),
-                items: (payload.line_items || []).map(li => ({
-                    item_id: li.price_id || 'reviv-plus',
+                transaction_id: payload.sessionId,
+                value: totalValue,
+                currency,
+                items: (payload.lineItems || []).map(li => ({
+                    item_id: slugify(li.description),
                     item_name: li.description || 'ReViv Plus',
                     quantity: li.quantity || 1,
-                    price: (li.amount_subtotal || 0) / 100
+                    // GA4 expects unit price (number). We try unitAmount then fall back.
+                    price: parseEuroStringToNumber(li.unitAmount || li.amountTotal || li.amountSubtotal)
                 }))
             });
         } catch (e) { /* noop */ }
@@ -369,40 +409,38 @@
             const res = await fetch(`${API_BASE}/api/payments/checkout-session/${encodeURIComponent(sessionId)}`, {
                 headers: { 'Accept': 'application/json' }
             });
-
             if (!res.ok) throw new Error('Greška pri dohvaćanju narudžbe.');
 
             const data = await res.json();
 
-            // Fill UI
-            orderIdEl.textContent = data.id || sessionId;
-            nameEl.textContent = data.customer_name || 'Kupac';
-            emailEl.textContent = data.customer_email || '';
-            amountEl.textContent = formatAmountMinor(data.amount_total, data.currency);
-            currencyEl.textContent = '';
-            renderItems(data.line_items, data.currency);
+            // Map new fields to UI
+            orderIdEl.textContent = data.sessionId || sessionId;
+            nameEl.textContent = data.customerName || 'Kupac';
+            emailEl.textContent = data.customerEmail || '';
+            amountEl.textContent = displayAmount(data.amountTotal || data.amountSubtotal);
+            currencyEl.textContent = ''; // already included in display string
+            renderItems(data.lineItems, data.currency);
 
-            // Invoice (optional)
+            // Invoice link isn't in new API; keep hidden unless you add it later.
             if (data.invoice_pdf) {
                 invoiceBtn.href = data.invoice_pdf;
                 invoiceBtn.classList.remove('d-none');
             }
 
-            // Track conversion
+            // Conversion tracking
             firePurchaseTracking(data);
         } catch (err) {
             console.error(err);
             itemsEl.innerHTML = `
-          <div class="order-row d-flex justify-content-between py-3">
-            <div class="text-danger">Ne možemo prikazati detalje narudžbe. Molimo provjerite e-poštu ili nas kontaktirajte.</div>
-          </div>`;
+        <div class="order-row d-flex justify-content-between py-3">
+          <div class="text-danger">Ne možemo prikazati detalje narudžbe. Molimo provjerite e-poštu ili nas kontaktirajte.</div>
+        </div>`;
         } finally {
             spinner.classList.remove('show');
         }
     }
 
     document.getElementById('print').addEventListener('click', () => window.print());
-
     hydrate();
 </script>
 </body>
