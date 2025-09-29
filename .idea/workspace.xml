@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed shopping cart design">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/successful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed app config">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759135868544</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="changed app config">
+      <option name="closed" value="true" />
+      <created>1759168832591</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1759168832591</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +413,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed call to action button" />
     <MESSAGE value="changed call to action and linked in button" />
     <MESSAGE value="set call to action button" />
     <MESSAGE value="rearange of reviv pharmacy locations" />
@@ -431,6 +437,7 @@
     <MESSAGE value="finished with success page" />
     <MESSAGE value="changed design of quantity buttons" />
     <MESSAGE value="changed shopping cart design" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed shopping cart design" />
+    <MESSAGE value="changed app config" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed app config" />
   </component>
 </project>
