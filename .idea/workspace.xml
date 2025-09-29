@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed app config">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="success page styling">
+      <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759168832591</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="success page styling">
+      <option name="closed" value="true" />
+      <created>1759170825902</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1759170825902</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +420,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed call to action and linked in button" />
     <MESSAGE value="set call to action button" />
     <MESSAGE value="rearange of reviv pharmacy locations" />
     <MESSAGE value="call to action for pharmacy web shop" />
@@ -438,6 +444,7 @@
     <MESSAGE value="changed design of quantity buttons" />
     <MESSAGE value="changed shopping cart design" />
     <MESSAGE value="changed app config" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed app config" />
+    <MESSAGE value="success page styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="success page styling" />
   </component>
 </project>
