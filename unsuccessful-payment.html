@@ -134,7 +134,8 @@
                 <div class="navbar-nav">
                     <a href="index.html" class="nav-item nav-link">Naslovna</a>
                     <a href="index.html#about" class="nav-item nav-link">O ReViv PLUS-u</a>
-                    <a href="index.html#benefits" class="nav-item nav-link">Prednosti</a>
+                    <a href="index.html#benefits" class="nav-item nav-link">Prednosti korištenja</a>
+                    <a href="index.html#how-to-use" class="nav-item nav-link">Kako koristiti?</a>
                     <a href="index.html#contact" class="nav-item nav-link">Kontakt</a>
                 </div>
             </div>
@@ -174,7 +175,7 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <div class="subtle">Broj narudžbe (ako postoji)</div>
+                            <div class="subtle">Broj narudžbe:</div>
                             <div id="order-id" class="fw-semibold">—</div>
                         </div>
                     </div>
@@ -256,6 +257,17 @@
 <script>
     new WOW().init();
     document.getElementById('spinner').classList.remove('show');
+
+    const qs = new URLSearchParams(location.search);
+
+    const el = (id) => document.getElementById(id);
+
+    const sessionId = qs.get('session_id');
+
+    const orderIdEl = el('order-id');
+
+    orderIdEl.textContent = sessionId;
+
 </script>
 
 </body>

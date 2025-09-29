@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="success page styling">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/successful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -401,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759170825902</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="success page styling">
+      <option name="closed" value="true" />
+      <created>1759171132018</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1759171132018</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
