@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="cart is opened automatically after first product added" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="style script override">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/successful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -439,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759173560888</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="style script override">
+      <option name="closed" value="true" />
+      <created>1759174078677</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1759174078677</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="menu design bugfixing" />
     <MESSAGE value="added google tag for google analytics" />
     <MESSAGE value="added new pharmacy for web shop redirect:pharmeria" />
     <MESSAGE value="added meta pixel" />
@@ -495,6 +506,7 @@
     <MESSAGE value="fixed hero containers" />
     <MESSAGE value="finished with design changes" />
     <MESSAGE value="cart is opened automatically after first product added" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart is opened automatically after first product added" />
+    <MESSAGE value="style script override" />
+    <option name="LAST_COMMIT_MESSAGE" value="style script override" />
   </component>
 </project>
