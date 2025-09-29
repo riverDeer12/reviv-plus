@@ -1044,9 +1044,9 @@
                     return;
                 }
 
-                if(existing.quantity === 1) {
+                if (existing.quantity === 1) {
                     cart.items = cart.items.filter(item => item.productId !== productId);
-                } else{
+                } else {
                     existing.quantity--;
                 }
 
@@ -1159,13 +1159,15 @@
 
                 if (!items.length) {
                     cartDiv.innerHTML = `
-          <h2>Vaša košarica</h2>
-          <p class="muted">Košarica je prazna.</p>
-        `;
-                    return;
+                      <div class="cart">
+                        <h2>Vaša košarica</h2>
+                        <p class="muted">Košarica je prazna.</p>
+                      </div>
+                    `;
+                                    return;
                 }
 
-                let rows = "";
+                let body = "";
                 let total = 0;
 
                 for (const it of items) {
@@ -1175,47 +1177,61 @@
                     const line = unitPrice * qty;
                     total += line;
 
-                    rows += `
-          <tr>
-            <td>${name}</td>
-            <td>
-              <button type="button" data-product-price="${it.productPrice}" data-product-id="${it.productId}"
-                      class="remove-product-quantity-btn quantity-btn">
-                    <i class="bi bi-dash"></i>
-                </button>
-                    ${qty}
-                <button type="button" data-product-price="${it.productPrice}" data-product-id="${it.productId}"
-                        class="add-product-quantity-btn quantity-btn">
-                    <i class="bi bi-plus"></i>
-                </button>
-            <td>${formatEUR(unitPrice)}</td>
-            <td>${formatEUR(line)}</td>
-          </tr>
-        `;
+                    body += `
+                      <div class="cart-item" role="row" aria-label="${name}">
+                        <div class="cart-col cart-col--name">
+                          <span class="cart-name">${name}</span>
+                        </div>
+
+                        <div class="cart-col cart-col--qty" aria-label="Količina">
+                          <div class="quantity">
+                            <button type="button"
+                              data-product-price="${it.productPrice}"
+                              data-product-id="${it.productId}"
+                              class="remove-product-quantity-btn quantity-btn"
+                              aria-label="Smanji količinu">
+                              <i class="bi bi-dash" aria-hidden="true"></i>
+                            </button>
+                            <span aria-live="polite">${qty}</span>
+                            <button type="button"
+                              data-product-price="${it.productPrice}"
+                              data-product-id="${it.productId}"
+                              class="add-product-quantity-btn quantity-btn"
+                              aria-label="Povećaj količinu">
+                              <i class="bi bi-plus" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="cart-col cart-col--unit" aria-label="Cijena proizvoda">
+                          <span class="cart-unit">${formatEUR(unitPrice)}</span>
+                        </div>
+
+                        <div class="cart-col cart-col--line" aria-label="Cijena retka">
+                          <span class="cart-line">${formatEUR(line)}</span>
+                        </div>
+                      </div>
+                    `;
                 }
 
-                cartDiv.innerHTML = `
-        <h2>Vaša košarica</h2>
-        <table aria-label="Sadržaj košarice">
-          <thead>
-            <tr>
-              <th>Naziv proizvoda</th>
-              <th>Količina</th>
-              <th>Cijena proizvoda</th>
-              <th>Cijena</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${rows}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="3"></td>
-              <td>Ukupno: ${formatEUR(total)}</td>
-            </tr>
-          </tfoot>
-        </table>
-      `;
+                            cartDiv.innerHTML = `
+                <div class="cart" aria-label="Sadržaj košarice">
+                  <h2>Vaša košarica</h2>
+
+                  <div class="cart-header" aria-hidden="true">
+                    <div>Naziv proizvoda</div>
+                    <div>Količina</div>
+                    <div>Cijena proizvoda</div>
+                    <div>Cijena</div>
+                  </div>
+
+                  <div class="cart-items">
+                    ${body}
+                  </div>
+
+                  <div class="cart-total">Ukupno: ${formatEUR(total)}</div>
+                </div>
+              `;
             }
 
             // Toggle show/hide

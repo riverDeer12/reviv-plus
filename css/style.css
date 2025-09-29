@@ -261,6 +261,11 @@ img.animated.pulse {
     #call-to-action-button {
         margin-bottom: 0.8rem;
     }
+
+    .product-description{
+        font-size: 0.85rem !important;
+        margin-right: 2rem !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -722,3 +727,91 @@ img.animated.pulse {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Shopping Cart */
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart h2 { margin: 0 0 .5rem }
+.cart .muted { color: #6b7280 }
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.cart-header {
+    display: none;
+    font-weight: 600;
+    opacity: .7;
+    padding: .5rem .75rem;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .75rem;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+.cart-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.cart-name { font-weight: 500; }
+.cart-unit, .cart-line { white-space: nowrap; }
+
+.quantity {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+.quantity-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: .5rem;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: .75rem;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .cart-header {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 3rem;
+    }
+    .cart-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+    .cart-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+    }
+    .cart-col--name   { grid-column: 1; }
+    .cart-col--qty    { grid-column: 2; justify-content: flex-start; }
+    .cart-col--unit   { grid-column: 3; justify-content: flex-end; }
+    .cart-col--line   { grid-column: 4; justify-content: flex-end; }
+}
+
