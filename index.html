@@ -1034,6 +1034,9 @@
                 saveCart();
                 showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-plus fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno dodan u košaricu.`);
                 loadCartItems();
+                cartDiv.removeAttribute("hidden");
+                toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
+                toggleBtn.setAttribute("aria-expanded", "true");
                 renderCartItems();
             }
 
