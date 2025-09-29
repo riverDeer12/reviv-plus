@@ -815,3 +815,10 @@ img.animated.pulse {
     .cart-col--line   { grid-column: 4; justify-content: flex-end; }
 }
 
+.order-id-container{
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: 1rem;
+}
+
