@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed design of quantity buttons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed shopping cart design" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +110,7 @@
       <workItem from="1758012700107" duration="2181000" />
       <workItem from="1758561377658" duration="3123000" />
       <workItem from="1758566479847" duration="45171000" />
-      <workItem from="1759072952091" duration="3359000" />
+      <workItem from="1759072952091" duration="3821000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -379,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758821854686</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="changed shopping cart design">
+      <option name="closed" value="true" />
+      <created>1759135868544</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1759135868544</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bug fix for responsiveness" />
     <MESSAGE value="changed call to action button" />
     <MESSAGE value="changed call to action and linked in button" />
     <MESSAGE value="set call to action button" />
@@ -423,6 +426,7 @@
     <MESSAGE value="finished with shopping cart&#10;working on successful payment page to show payment details" />
     <MESSAGE value="finished with success page" />
     <MESSAGE value="changed design of quantity buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed design of quantity buttons" />
+    <MESSAGE value="changed shopping cart design" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed shopping cart design" />
   </component>
 </project>
