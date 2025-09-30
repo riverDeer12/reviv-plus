@@ -1306,7 +1306,24 @@
     <script>
         const stripe = Stripe('pk_test_51RHmsXARY6iIldCB99XK6sNUHMhIPqJTXUWEczue4Tm5eDUYfWnNLfZJgB4UmjDeHXaxtfLUkjiyEayve4sMyhUo008T9IBRfy');
 
-        document.getElementById('buy').addEventListener('click', async () => {
+        document.getElementById('buy').addEventListener('click', async (event) => {
+
+            const buyButton = event.currentTarget;
+
+            const icon = buyButton.querySelector("i");
+
+            // Prevent adding multiple spinners
+            if (!buyButton.classList.contains("loading")) {
+                buyButton.classList.add("loading");
+
+                // Replace the credit-card icon with a spinner
+                if (icon) icon.style.display = "none";
+
+                const spinner = document.createElement("span");
+                spinner.classList.add("spinner");
+                buyButton.appendChild(spinner);
+            }
+
             try {
                 const res = await fetch(`${API_BASE}/api/payments/reviv-plus`, {
                     method: 'POST',
@@ -1321,6 +1338,12 @@
                 const {error} = await stripe.redirectToCheckout({sessionId: data.sessionId});
 
                 if (error) alert(error.message);
+
+                spinner.remove();
+
+                if (icon) icon.style.display = "";
+
+                buyButton.classList.remove("loading");
             } catch (err) {
                 console.error(err);
                 alert('Something went wrong starting Checkout.');

@@ -829,3 +829,27 @@ img.animated.pulse {
     margin-top: 1rem;
 }
 
+/* Optional: make button look disabled when loading */
+.go-to-payment-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Spinner */
+.go-to-payment-btn .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;          /* spinner border color */
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
