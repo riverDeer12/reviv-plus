@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added buy button to navigation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added scroll&#10;paddings on shopping cart and hero headers">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/successful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <workItem from="1758561377658" duration="3123000" />
       <workItem from="1758566479847" duration="45171000" />
       <workItem from="1759072952091" duration="3821000" />
-      <workItem from="1759240457917" duration="2905000" />
+      <workItem from="1759240457917" duration="3226000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -462,7 +458,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759175656351</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="added scroll&#10;paddings on shopping cart and hero headers">
+      <option name="closed" value="true" />
+      <created>1759243790881</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1759243790881</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +497,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added new pharmacy for web shop redirect:pharmeria" />
     <MESSAGE value="added meta pixel" />
     <MESSAGE value="added google tag manager" />
     <MESSAGE value="added track lead for event on pharmeria or pablo web shop link" />
@@ -518,6 +521,7 @@
     <MESSAGE value="cart is opened automatically after first product added" />
     <MESSAGE value="style script override" />
     <MESSAGE value="added buy button to navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added buy button to navigation" />
+    <MESSAGE value="added scroll&#10;paddings on shopping cart and hero headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scroll&#10;paddings on shopping cart and hero headers" />
   </component>
 </project>
