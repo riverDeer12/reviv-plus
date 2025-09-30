@@ -1,4 +1,9 @@
 /********** Template CSS **********/
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -217,7 +222,7 @@ img.animated.pulse {
 }
 
 .navbar .navbar-nav .nav-link {
-    margin-left: 1rem;
+    margin-left: 2rem;
     padding: 0;
     color: var(--bs-dark);
     font-weight: 500;
@@ -255,7 +260,6 @@ img.animated.pulse {
     .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
-        margin-bottom: 1rem;
     }
 
     #call-to-action-button {
@@ -710,15 +714,18 @@ img.animated.pulse {
     left: 2rem;
     background: rgb(141, 198, 63);
     color: white;
-    padding: 3rem;
+    padding: 1.1rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity .3s ease, transform .3s ease;
+    transition: opacity .3s
+    ease, transform .3s
+    ease;
     z-index: 9999;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bolder;
     width: 85%;
     border-radius: 0;
+    border: none;
     display: flex;
     align-items: center;
 }

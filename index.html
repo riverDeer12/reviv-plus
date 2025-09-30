@@ -1017,6 +1017,35 @@
             const CART_KEY = "cart";
             let cart = JSON.parse(localStorage.getItem(CART_KEY)) || {items: []};
 
+            function scrollToShoppingCart() {
+                const target = document.getElementById("shopping-cart");
+
+                const offset = 150;
+
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                const startPosition = window.scrollY;
+                const distance = targetPosition - startPosition;
+
+                const duration = 100;
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+
+                    const t = timeElapsed / duration;
+                    const progress = t < 0.5
+                        ? 4*t*t*t
+                        : 1 - Math.pow(-2*t + 2, 3) / 2;
+
+                    window.scrollTo(0, startPosition + distance * progress);
+
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                requestAnimationFrame(animation);
+            }
+
             function saveCart() {
                 localStorage.setItem(CART_KEY, JSON.stringify(cart));
             }
@@ -1035,6 +1064,7 @@
                 toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
                 toggleBtn.setAttribute("aria-expanded", "true");
                 renderCartItems();
+                scrollToShoppingCart();
             }
 
             function removeFromCart(productId) {
@@ -1164,7 +1194,7 @@
                         <p class="muted">Košarica je prazna.</p>
                       </div>
                     `;
-                                    return;
+                    return;
                 }
 
                 let body = "";
@@ -1214,7 +1244,7 @@
                     `;
                 }
 
-                            cartDiv.innerHTML = `
+                cartDiv.innerHTML = `
                 <div class="cart" aria-label="Sadržaj košarice">
                   <h2>Vaša košarica</h2>
 
