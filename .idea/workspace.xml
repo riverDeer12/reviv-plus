@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added spinner for buy button">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="button text made smaller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1758561377658" duration="3123000" />
       <workItem from="1758566479847" duration="45171000" />
       <workItem from="1759072952091" duration="3821000" />
-      <workItem from="1759240457917" duration="4813000" />
+      <workItem from="1759240457917" duration="5611000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -483,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759244717472</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="button text made smaller">
+      <option name="closed" value="true" />
+      <created>1759322899130</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1759322899130</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added track lead for event on pharmeria or pablo web shop link" />
     <MESSAGE value="added buy buttons, and copied section above about section" />
     <MESSAGE value="new guid for overriding style.css" />
     <MESSAGE value="gap on mobile mode between logos and buy buttons" />
@@ -539,6 +545,7 @@
     <MESSAGE value="added scroll&#10;paddings on shopping cart and hero headers" />
     <MESSAGE value="justify content center for shopping cart items" />
     <MESSAGE value="added spinner for buy button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added spinner for buy button" />
+    <MESSAGE value="button text made smaller" />
+    <option name="LAST_COMMIT_MESSAGE" value="button text made smaller" />
   </component>
 </project>
