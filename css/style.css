@@ -268,7 +268,11 @@ img.animated.pulse {
 
     .product-description{
         font-size: 0.85rem !important;
-        margin-right: 2rem !important;
+        margin-right: 1rem !important;
+    }
+
+    .product-row img{
+        margin-right: 0 !important;
     }
 }
 
