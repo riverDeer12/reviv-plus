@@ -113,7 +113,7 @@
       <workItem from="1759072952091" duration="3821000" />
       <workItem from="1759240457917" duration="6293000" />
       <workItem from="1759433595463" duration="2628000" />
-      <workItem from="1759757523709" duration="400000" />
+      <workItem from="1759757523709" duration="1060000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -121,14 +121,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00003" summary="finished with testimonials and footer, need to change about section">
-      <option name="closed" value="true" />
-      <created>1739374800006</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1739374800006</updated>
     </task>
     <task id="LOCAL-00004" summary="added new pictures">
       <option name="closed" value="true" />
@@ -506,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759757908423</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="changed product keys">
+      <option name="closed" value="true" />
+      <created>1759757943806</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1759757943806</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
