@@ -366,6 +366,10 @@ img.animated.pulse {
         font-size: .875rem !important;
     }
 
+    #menu-logo{
+        height: 45px !important;
+    }
+
     #about {
         padding-top: 0 !important;
     }

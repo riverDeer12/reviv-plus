@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed pk_key">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="moved call to action to more visible place">
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -119,7 +118,7 @@
       <workItem from="1759433595463" duration="2628000" />
       <workItem from="1759757523709" duration="1060000" />
       <workItem from="1759837266226" duration="952000" />
-      <workItem from="1759910962333" duration="2529000" />
+      <workItem from="1759910962333" duration="3168000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -127,14 +126,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fixed responsive of container hero images">
-      <option name="closed" value="true" />
-      <created>1739825956934</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1739825956934</updated>
     </task>
     <task id="LOCAL-00006" summary="fixed responsive of container hero images">
       <option name="closed" value="true" />
@@ -512,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759837444157</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="moved call to action to more visible place">
+      <option name="closed" value="true" />
+      <created>1759913885280</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1759913885280</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added 5 more locations for ljekarne jadran" />
     <MESSAGE value="removed popup" />
     <MESSAGE value="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector" />
     <MESSAGE value="added products, local storage management for shopping cart and payment for multiple products" />
@@ -568,6 +566,7 @@
     <MESSAGE value="mobile design bugfixes" />
     <MESSAGE value="changed product keys" />
     <MESSAGE value="changed pk_key" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed pk_key" />
+    <MESSAGE value="moved call to action to more visible place" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved call to action to more visible place" />
   </component>
 </project>
