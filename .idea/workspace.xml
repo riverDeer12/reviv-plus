@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="updated private key for stripe">
-      <change beforePath="$PROJECT_DIR$/successful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/successful-payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unsuccessful-payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/unsuccessful-payment.html" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="updated menu for success and unsuccessful payment pages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <workItem from="1759757523709" duration="1060000" />
       <workItem from="1759837266226" duration="952000" />
       <workItem from="1759910962333" duration="4373000" />
-      <workItem from="1761652703379" duration="206000" />
+      <workItem from="1761652703379" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -127,14 +127,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00009" summary="bug fix for responsiveness">
-      <option name="closed" value="true" />
-      <created>1741802071520</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1741802071520</updated>
     </task>
     <task id="LOCAL-00010" summary="changed call to action button">
       <option name="closed" value="true" />
@@ -512,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761652867203</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="updated menu for success and unsuccessful payment pages">
+      <option name="closed" value="true" />
+      <created>1761653030369</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1761653030369</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +543,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="need to make changes to shopping cart items list" />
     <MESSAGE value="finished with shopping cart&#10;working on successful payment page to show payment details" />
     <MESSAGE value="finished with success page" />
     <MESSAGE value="changed design of quantity buttons" />
@@ -568,6 +567,7 @@
     <MESSAGE value="smaller logo on mobile view" />
     <MESSAGE value="changed script version" />
     <MESSAGE value="updated private key for stripe" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated private key for stripe" />
+    <MESSAGE value="updated menu for success and unsuccessful payment pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated menu for success and unsuccessful payment pages" />
   </component>
 </project>
