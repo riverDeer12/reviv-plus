@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="moved call to action to more visible place">
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed script version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <workItem from="1759433595463" duration="2628000" />
       <workItem from="1759757523709" duration="1060000" />
       <workItem from="1759837266226" duration="952000" />
-      <workItem from="1759910962333" duration="3168000" />
+      <workItem from="1759910962333" duration="4373000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -126,22 +125,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixed responsive of container hero images">
-      <option name="closed" value="true" />
-      <created>1739866812250</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1739866812250</updated>
-    </task>
-    <task id="LOCAL-00007" summary="added pharmacy locations">
-      <option name="closed" value="true" />
-      <created>1741801439163</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1741801439163</updated>
     </task>
     <task id="LOCAL-00008" summary="refactoring of call to action button">
       <option name="closed" value="true" />
@@ -511,7 +494,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759913885280</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="smaller logo on mobile view">
+      <option name="closed" value="true" />
+      <created>1759914524391</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1759914524391</updated>
+    </task>
+    <task id="LOCAL-00055" summary="changed script version">
+      <option name="closed" value="true" />
+      <created>1759914846331</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1759914846331</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,8 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed popup" />
-    <MESSAGE value="added successful-payment.html and unsuccessful-payment.html pages&#10;need to change home page to add quantities and product selector" />
     <MESSAGE value="added products, local storage management for shopping cart and payment for multiple products" />
     <MESSAGE value="need to make changes to shopping cart items list" />
     <MESSAGE value="finished with shopping cart&#10;working on successful payment page to show payment details" />
@@ -567,6 +564,8 @@
     <MESSAGE value="changed product keys" />
     <MESSAGE value="changed pk_key" />
     <MESSAGE value="moved call to action to more visible place" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved call to action to more visible place" />
+    <MESSAGE value="smaller logo on mobile view" />
+    <MESSAGE value="changed script version" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed script version" />
   </component>
 </project>
