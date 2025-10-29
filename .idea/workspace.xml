@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="fixed bug for closing div on order info">
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="integrating box now">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,14 +127,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00011" summary="changed call to action and linked in button">
-      <option name="closed" value="true" />
-      <created>1741804161934</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1741804161934</updated>
     </task>
     <task id="LOCAL-00012" summary="set call to action button">
       <option name="closed" value="true" />
@@ -511,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761660323899</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="integrating box now">
+      <option name="closed" value="true" />
+      <created>1761687955262</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1761687955262</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +543,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished with success page" />
     <MESSAGE value="changed design of quantity buttons" />
     <MESSAGE value="changed shopping cart design" />
     <MESSAGE value="changed app config" />
@@ -567,6 +567,7 @@
     <MESSAGE value="updated private key for stripe" />
     <MESSAGE value="updated menu for success and unsuccessful payment pages" />
     <MESSAGE value="fixed bug for closing div on order info" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug for closing div on order info" />
+    <MESSAGE value="integrating box now" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrating box now" />
   </component>
 </project>

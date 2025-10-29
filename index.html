@@ -463,7 +463,7 @@
 
                         <div class="row my-3" id="shopping-cart" hidden></div>
 
-                        <div class="my-5" id="boxnowmap"></div>
+                        <div class="my-5" style="min-height: 400px;" id="boxnowmap"></div>
 
                         <span id="buy"
                               class="go-to-payment-btn my-1">Idi na plaćanje  <i
@@ -1354,7 +1354,7 @@
     });
 </script>
 
-<!-- BoxNow Widget -->
+<!-- BoxNow Widget Start -->
 <script type="text/javascript">
 
     var _bn_map_widget_config = {
@@ -1363,20 +1363,20 @@
         partnerId: 11406,
         parentElement: '#boxnowmap',
         afterSelect: function (selected) {
-            document.getElementById('example4_zip').value = selected.boxnowLockerPostalCode;
-            document.getElementById('example4_address').value = selected.boxnowLockerAddressLine1;
-            document.getElementById('example4_id').value = selected.boxnowLockerId;
-        },
+            alert(selected.boxnowLockerPostalCode);
+            alert(selected.boxnowLockerAddressLine1);
+            alert(selected.boxnowLockerId)
+        }
     };
     (function (d) {
         var e = d.createElement('script');
-        e.src ='https://widget-cdn.boxnow.hr/map-widget/client/v5.js';
+        e.src = 'https://widget-cdn.boxnow.hr/map-widget/client/v5.js';
         e.async = true;
         e.defer = true;
         d.getElementsByTagName('head')[0].appendChild(e);
     })(document);
-    //document.querySelector('iframe').remove();
 </script>
+<!-- BoxNow Widget End -->
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H026L8ZCS2"></script>
