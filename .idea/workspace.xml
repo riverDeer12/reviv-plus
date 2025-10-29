@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed styling for map">
-      <change afterPath="$PROJECT_DIR$/img/box-now-logo.png" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +120,7 @@
       <workItem from="1759837266226" duration="952000" />
       <workItem from="1759910962333" duration="4373000" />
       <workItem from="1761652703379" duration="3857000" />
-      <workItem from="1761752433429" duration="5594000" />
+      <workItem from="1761752433429" duration="5857000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -130,14 +128,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00013" summary="rearange of reviv pharmacy locations">
-      <option name="closed" value="true" />
-      <created>1742226382098</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1742226382098</updated>
     </task>
     <task id="LOCAL-00014" summary="call to action for pharmacy web shop">
       <option name="closed" value="true" />
@@ -515,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761732477072</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful">
+      <option name="closed" value="true" />
+      <created>1761770333481</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1761770333481</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed shopping cart design" />
     <MESSAGE value="changed app config" />
     <MESSAGE value="success page styling" />
     <MESSAGE value="design changes" />
@@ -571,6 +568,7 @@
     <MESSAGE value="fixed bug for closing div on order info" />
     <MESSAGE value="integrating box now" />
     <MESSAGE value="changed styling for map" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed styling for map" />
+    <MESSAGE value="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful" />
   </component>
 </project>
