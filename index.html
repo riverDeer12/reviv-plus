@@ -463,7 +463,9 @@
 
                         <div class="row my-3" id="shopping-cart" hidden></div>
 
-                        <div class="my-5" style="min-height: 400px;" id="boxnowmap"></div>
+                        <h2 class="mt-4">Odabir <img width="250" src="img/box-now-logo.png"> paketomata:</h2>
+
+                        <div class="mb-5" style="min-height: 400px;" id="boxnowmap"></div>
 
                         <span id="buy"
                               class="go-to-payment-btn my-1">Idi na plaćanje  <i
@@ -1061,7 +1063,7 @@
                 cart.items.push({productId, productName, productPrice, quantity: 1});
             }
             saveCart();
-            showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-plus fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno dodan u košaricu.`);
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-cart-plus fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno dodan u košaricu.`, "toast");
             loadCartItems();
             cartDiv.removeAttribute("hidden");
             toggleBtn.innerHTML = "Sakrij košaricu <i class=\"fa fa-shopping-basket\"></i>";
@@ -1084,14 +1086,14 @@
             }
 
             saveCart();
-            showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno uklonjen iz košarice.`);
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvod je uspješno uklonjen iz košarice.`, "toast");
             loadCartItems();
             renderCartItems();
         }
 
-        function showToast(message) {
+        function showToast(message, className) {
             const toast = document.createElement("div");
-            toast.className = "toast";
+            toast.className = className;
             toast.innerHTML = message;
             document.body.appendChild(toast);
 
@@ -1155,7 +1157,7 @@
             localStorage.removeItem('cart');
             cart = {items: []};
             saveCart();
-            showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvodi su uspješno uklonjeni iz košarice.`);
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Proizvodi su uspješno uklonjeni iz košarice.`, "toast");
             loadCartItems();
             renderCartItems();
         })
@@ -1311,6 +1313,20 @@
 
     document.getElementById('buy').addEventListener('click', async (event) => {
 
+        function showToast(message, className) {
+            const toast = document.createElement("div");
+            toast.className = className;
+            toast.innerHTML = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => toast.classList.add("show"), 100);
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
         const buyButton = event.currentTarget;
 
         const icon = buyButton.querySelector("i");
@@ -1327,11 +1343,23 @@
             buyButton.appendChild(spinner);
         }
 
+        if (!localStorage.getItem('boxnowLockerId')) {
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-box-open fa-2x ms-2" aria-hidden="true"></i>Paketomat nije odabran.`, "toast-warning");
+
+            if (icon) icon.style.display = "";
+
+            buyButton.classList.remove("loading");
+
+            document.querySelectorAll('.spinner').forEach(el => el.remove());
+
+            return;
+        }
+
         try {
             const res = await fetch(`${API_BASE}/api/payments/reviv-plus`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: localStorage.getItem("cart")
+                body: localStorage.getItem('cart')
             });
 
             if (!res.ok) throw new Error('Network response was not ok');
@@ -1357,15 +1385,31 @@
 <!-- BoxNow Widget Start -->
 <script type="text/javascript">
 
+    function showToast(message, className) {
+        const toast = document.createElement("div");
+        toast.className = className;
+        toast.innerHTML = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.classList.add("show"), 100);
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
     var _bn_map_widget_config = {
         autoclose: false,
         autoshow: true,
         partnerId: 11406,
         parentElement: '#boxnowmap',
         afterSelect: function (selected) {
-            alert(selected.boxnowLockerPostalCode);
-            alert(selected.boxnowLockerAddressLine1);
-            alert(selected.boxnowLockerId)
+            localStorage.setItem('boxnowLockerPostalCode', selected.boxnowLockerPostalCode);
+            localStorage.setItem('boxnowLockerAddressLine1', selected.boxnowLockerAddressLine1);
+            localStorage.setItem('boxnowLockerId', selected.boxnowLockerId);
+
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-box-open fa-2x ms-2" aria-hidden="true"></i>Odabran je paketomat: ${selected.boxnowLockerAddressLine1}`, "toast");
         }
     };
     (function (d) {
