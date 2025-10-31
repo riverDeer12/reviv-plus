@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed pk">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="validation message for shopping cart" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,14 +126,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00016" summary="menu design bugfixing">
-      <option name="closed" value="true" />
-      <created>1742292600136</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1742292600136</updated>
     </task>
     <task id="LOCAL-00017" summary="added google tag for google analytics">
       <option name="closed" value="true" />
@@ -513,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761913392635</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="validation message for shopping cart">
+      <option name="closed" value="true" />
+      <created>1761914248077</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1761914248077</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="success page styling" />
     <MESSAGE value="design changes" />
     <MESSAGE value="fixed hero containers" />
     <MESSAGE value="finished with design changes" />
@@ -569,6 +566,7 @@
     <MESSAGE value="changed styling for map" />
     <MESSAGE value="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful" />
     <MESSAGE value="changed pk" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed pk" />
+    <MESSAGE value="validation message for shopping cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation message for shopping cart" />
   </component>
 </project>
