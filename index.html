@@ -1312,7 +1312,7 @@
 
 <!-- Stripe Connector -->
 <script>
-    const stripe = Stripe('pk_live_51SCzYi1aWLqxwX5DwQx7XCw9hxC2mNh2G5PfmJwgkYG3SUrA52fjERfIROJ9gmIh6biA0SvLF0H8KMqCjpV7SpBS00lazFGsnl');
+    const stripe = Stripe('pk_test_51RHmsXARY6iIldCB99XK6sNUHMhIPqJTXUWEczue4Tm5eDUYfWnNLfZJgB4UmjDeHXaxtfLUkjiyEayve4sMyhUo008T9IBRfy');
 
     document.getElementById('buy').addEventListener('click', async (event) => {
 
@@ -1359,10 +1359,20 @@
         }
 
         try {
+
+            const storedCart = JSON.parse(localStorage.getItem('cart') || '{}');
+
+            const request = {
+                items: storedCart.items || storedCart,
+                boxNowLockerId: localStorage.getItem('boxnowLockerId'),
+                boxNowLockerPostalCode: localStorage.getItem('boxnowLockerPostalCode'),
+                boxNowLockerAddressLine1: localStorage.getItem('boxnowLockerAddressLine1')
+            };
+
             const res = await fetch(`${API_BASE}/api/payments/reviv-plus`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: localStorage.getItem('cart')
+                body: JSON.stringify(request)
             });
 
             if (!res.ok) throw new Error('Network response was not ok');
