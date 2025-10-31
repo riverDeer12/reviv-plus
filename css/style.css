@@ -758,7 +758,63 @@ img.animated.pulse {
     align-items: center;
 }
 
+.toast-warning {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    left: 2rem;
+    background: #febc2f;
+    color: white;
+    padding: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .3s
+    ease, transform .3s
+    ease;
+    z-index: 9999;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 85%;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.toast-info {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    left: 2rem;
+    background: #8a8a8a;
+    color: white;
+    padding: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .3s
+    ease, transform .3s
+    ease;
+    z-index: 9999;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 85%;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
 .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-warning.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-info.show {
     opacity: 1;
     transform: translateY(0);
 }
