@@ -1358,6 +1358,18 @@
             return;
         }
 
+        if (!localStorage.getItem('cart')) {
+            showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Košarica je prazna.`, "toast-warning");
+
+            if (icon) icon.style.display = "";
+
+            buyButton.classList.remove("loading");
+
+            document.querySelectorAll('.spinner').forEach(el => el.remove());
+
+            return;
+        }
+
         try {
 
             const storedCart = JSON.parse(localStorage.getItem('cart') || '{}');

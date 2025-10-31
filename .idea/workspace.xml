@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="changed pk">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,14 +128,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00015" summary="new guid for style.css to override caching">
-      <option name="closed" value="true" />
-      <created>1742290451116</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1742290451116</updated>
     </task>
     <task id="LOCAL-00016" summary="menu design bugfixing">
       <option name="closed" value="true" />
@@ -513,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761770545986</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="changed pk">
+      <option name="closed" value="true" />
+      <created>1761913392635</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1761913392635</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed app config" />
     <MESSAGE value="success page styling" />
     <MESSAGE value="design changes" />
     <MESSAGE value="fixed hero containers" />
@@ -569,6 +568,7 @@
     <MESSAGE value="integrating box now" />
     <MESSAGE value="changed styling for map" />
     <MESSAGE value="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful" />
-    <option name="LAST_COMMIT_MESSAGE" value="added box now logo&#10;locker is saved in local storage&#10;will provide delivery data when payment is successful" />
+    <MESSAGE value="changed pk" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed pk" />
   </component>
 </project>
