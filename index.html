@@ -1346,7 +1346,7 @@
             buyButton.appendChild(spinner);
         }
 
-        if (!localStorage.getItem('boxnowLockerId')) {
+        if (!('boxnowLockerId' in localStorage) || !localStorage.getItem('boxnowLockerId')) {
             showToast(`<i style="margin-right: 1.5rem" class="fa fa-box-open fa-2x ms-2" aria-hidden="true"></i>Paketomat nije odabran.`, "toast-warning");
 
             if (icon) icon.style.display = "";
@@ -1358,7 +1358,7 @@
             return;
         }
 
-        if (!localStorage.getItem('cart')) {
+        if (!('cart' in localStorage) || !localStorage.getItem('cart')) {
             showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Košarica je prazna.`, "toast-warning");
 
             if (icon) icon.style.display = "";
