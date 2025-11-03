@@ -1358,7 +1358,11 @@
             return;
         }
 
-        if (!('cart' in localStorage) || !localStorage.getItem('cart')) {
+        if (
+            !('cart' in localStorage) ||
+            !localStorage.getItem('cart') ||
+            localStorage.getItem('cart') === '{"items":[]}'
+        )  {
             showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Košarica je prazna.`, "toast-warning");
 
             if (icon) icon.style.display = "";
