@@ -984,7 +984,15 @@
                 <div class="col-md-6 text-center  mb-3 mb-md-0">
                     &copy; Copyright <a class="border-bottom" href="https://rdd.software"
                                         target="_blank">rdd.software</a>
-                    <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script>
+                    <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script><br>
+                    <div class="my-2">
+                        <a class="border-bottom" href="https://reviv-plus.com/terms-and-conditions.html"
+                           target="_blank">Uvjeti poslovanja</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/gdpr.html"
+                           target="_blank">Privatnost podataka</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/cookies-policy.html"
+                           target="_blank">Politika kolačića</a>
+                    </div>
                 </div>
                 <div class="col-md-6 text-center  mb-3 mb-md-0">
                     <img width="200" src="img/box-now-logo.png" alt="">
@@ -1362,7 +1370,7 @@
             !('cart' in localStorage) ||
             !localStorage.getItem('cart') ||
             localStorage.getItem('cart') === '{"items":[]}'
-        )  {
+        ) {
             showToast(`<i style="margin-right: 1.5rem" class="fa fa-shopping-cart fa-2x ms-2" aria-hidden="true"></i>Košarica je prazna.`, "toast-warning");
 
             if (icon) icon.style.display = "";
