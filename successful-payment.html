@@ -273,6 +273,15 @@
                     &copy; Copyright <a class="border-bottom" href="https://rdd.software"
                                         target="_blank">rdd.software</a>
                     <script>document.write(/\d{4}/.exec(Date())[0] + ".")</script>
+                    <br>
+                    <div class="my-2">
+                        <a class="border-bottom" href="https://reviv-plus.com/terms-and-conditions.html"
+                           target="_blank">Uvjeti poslovanja</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/gdpr.html"
+                           target="_blank">Privatnost podataka</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/cookies-policy.html"
+                           target="_blank">Politika kolačića</a>
+                    </div>
                 </div>
                 <div class="col-md-6 text-center  mb-3 mb-md-0">
                     <img width="200" src="img/box-now-logo.png" alt="">
@@ -384,7 +393,8 @@
                 })),
                 content_type: 'product'
             });
-        } catch (e) { /* noop */ }
+        } catch (e) { /* noop */
+        }
 
         // GA4
         try {
@@ -400,7 +410,8 @@
                     price: parseEuroStringToNumber(li.unitAmount || li.amountTotal || li.amountSubtotal)
                 }))
             });
-        } catch (e) { /* noop */ }
+        } catch (e) { /* noop */
+        }
     }
 
     async function hydrate() {
@@ -418,7 +429,7 @@
             }
 
             const res = await fetch(`${API_BASE}/api/payments/checkout-session/${encodeURIComponent(sessionId)}`, {
-                headers: { 'Accept': 'application/json' }
+                headers: {'Accept': 'application/json'}
             });
             if (!res.ok) throw new Error('Greška pri dohvaćanju narudžbe.');
 
