@@ -428,9 +428,10 @@
                 return;
             }
 
-            const res = await fetch(`${API_BASE}/api/payments/checkout-session/${encodeURIComponent(sessionId)}`, {
+            const res = await fetch(`${API_BASE}/api/shipping-providers/box-now/reviv-plus/create-order/${encodeURIComponent(sessionId)}`, {
                 headers: {'Accept': 'application/json'}
             });
+
             if (!res.ok) throw new Error('Greška pri dohvaćanju narudžbe.');
 
             const data = await res.json();
