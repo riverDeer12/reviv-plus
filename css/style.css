@@ -80,6 +80,72 @@ img.animated.pulse {
     font-size: 1rem !important;
 }
 
+/* Entire left column: center horizontally */
+.about-cta-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* horizontal center */
+    height: 100%;
+}
+
+/* Button wrapper: stays at top, centered */
+.about-cta-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+/* Image wrapper: takes remaining space, vertically centered */
+.about-cta-image {
+    flex: 1;                     /* remaining space */
+    display: flex;
+    justify-content: center;     /* horizontal center */
+    align-items: center;         /* vertical center */
+    width: 100%;
+}
+
+
+/* The red button itself */
+.about-cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 14px 24px;
+    background: #f24b3a;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-cta-btn:hover {
+    background: #f24b3a;
+    color: #fff;
+}
+
+.about-cta-btn i {
+    margin-left: 10px;
+}
+
+/* Position button below the green area, centered */
+.how-to-use-cta {
+    position: absolute;
+    bottom: -35px;            /* move outside the green container */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Optional width control */
+.how-to-use-cta .about-cta-btn {
+    max-width: 500px;
+}
+
 .add-to-cart-btn {
     background-color: #8DC63F;
     padding: 1rem;
