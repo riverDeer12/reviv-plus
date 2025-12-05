@@ -38,7 +38,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css?ver=d4f61abf-2b4e-4e08-a7d1-3192ae42ff0e" rel="stylesheet">
+    <link href="css/style.css?ver=58b584d2-6c90-4497-a97d-bb770f63dd20" rel="stylesheet">
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -476,7 +476,7 @@
                         <img src="img/pill-box.png" alt="ReViv Plus 60">
                         <div class="product-info">
                             <div class="product-description">ReViv Plus 60 kapsula</div>
-                            <span data-product-id="prod_TJtDu45campD2B" id="btn-product-60"
+                            <span data-product-id="prod_TBZLeyMK4wFC8I" id="btn-product-60"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
                                     class="fa fa-shopping-basket"></i></span>
                         </div>
@@ -486,7 +486,7 @@
                         <img src="img/pill-box.png" alt="ReViv Plus 30">
                         <div class="product-info">
                             <div class="product-description">ReViv Plus 30 kapsula</div>
-                            <span data-product-id="prod_TJtERAoefR0NUO" id="btn-product-30"
+                            <span data-product-id="prod_TBZDHAl3iahpaq" id="btn-product-30"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
                                     class="fa fa-shopping-basket"></i></span>
                         </div>
@@ -1063,7 +1063,7 @@
 
     const CART_KEY = "cart";
 
-    const API_BASE = 'https://apex-performance.fit';
+    const API_BASE = 'https://localhost:7173';
 
     const cartDiv = document.getElementById("shopping-cart");
     const toggleBtn = document.getElementById("showShoppingCartBtn");
@@ -1162,7 +1162,7 @@
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
                         products: [
-                            "prod_TJtDu45campD2B", "prod_TJtERAoefR0NUO"
+                            "prod_TBZLeyMK4wFC8I", "prod_TBZDHAl3iahpaq"
                         ]
                     })
                 });
@@ -1359,7 +1359,7 @@
 
 <!-- Stripe Connector -->
 <script>
-    const stripe = Stripe('pk_live_51SCzYi1aWLqxwX5DwQx7XCw9hxC2mNh2G5PfmJwgkYG3SUrA52fjERfIROJ9gmIh6biA0SvLF0H8KMqCjpV7SpBS00lazFGsnl');
+    const stripe = Stripe('pk_test_51SCzYi1aWLqxwX5DYk4IXj0xEl8YcXif9Dx2tiTJcwxI6eLobk0LPX6DdPXrXTFf9MoIkH3UAUO7IP8yA06aHqf200U9URbIg0');
 
     document.getElementById('buy').addEventListener('click', async (event) => {
 
