@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="validation for empty cart">
-      <change afterPath="$PROJECT_DIR$/cookies-policy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gdpr.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obrazac_za_jednostrani_raskid_ugovora.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_reviv_plus.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/terms-and-conditions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-shop-publish.zip" afterDir="false" />
+    <list default="true" id="cfcdd37f-8f59-4980-8355-de8579768f95" name="Changes" comment="created branch for easier testing, which uses test products and settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-shop-publish.zip" beforeDir="false" afterPath="$PROJECT_DIR$/publish_25112025.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="box-now-integration" />
+        <entry key="$PROJECT_DIR$" value="testing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,25 +56,25 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;production&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/riverdeer/Projects/reviv-plus&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "production",
+    "last_opened_file_path": "/Users/riverdeer/Projects/reviv-plus",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -89,6 +84,19 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/img" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/reviv-plus/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -129,6 +137,9 @@
       <workItem from="1761652703379" duration="3857000" />
       <workItem from="1761752433429" duration="10586000" />
       <workItem from="1761835251201" duration="5229000" />
+      <workItem from="1764094285532" duration="36048000" />
+      <workItem from="1768393529262" duration="2616000" />
+      <workItem from="1768564648668" duration="3442000" />
     </task>
     <task id="LOCAL-00001" summary="finished with contact section, need to insert about content put footer links and redesign footer bit more">
       <created>1739284421669</created>
@@ -136,22 +147,6 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1739284421669</updated>
-    </task>
-    <task id="LOCAL-00019" summary="added meta pixel">
-      <option name="closed" value="true" />
-      <created>1743526240541</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1743526240541</updated>
-    </task>
-    <task id="LOCAL-00020" summary="added google tag manager">
-      <option name="closed" value="true" />
-      <created>1743529388216</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1743529388216</updated>
     </task>
     <task id="LOCAL-00021" summary="added track lead for event on pharmeria or pablo web shop link">
       <option name="closed" value="true" />
@@ -521,7 +516,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762176434362</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="added creating boxnow order to successful-payment.html">
+      <option name="closed" value="true" />
+      <created>1763491562466</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1763491562467</updated>
+    </task>
+    <task id="LOCAL-00068" summary="created branch for easier testing, which uses test products and settings">
+      <option name="closed" value="true" />
+      <created>1764945492475</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1764945492475</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,8 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished with design changes" />
-    <MESSAGE value="cart is opened automatically after first product added" />
     <MESSAGE value="style script override" />
     <MESSAGE value="added buy button to navigation" />
     <MESSAGE value="added scroll&#10;paddings on shopping cart and hero headers" />
@@ -577,6 +586,8 @@
     <MESSAGE value="validation message for shopping cart" />
     <MESSAGE value="validation for cart and boxnowlockerid" />
     <MESSAGE value="validation for empty cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation for empty cart" />
+    <MESSAGE value="added creating boxnow order to successful-payment.html" />
+    <MESSAGE value="created branch for easier testing, which uses test products and settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="created branch for easier testing, which uses test products and settings" />
   </component>
 </project>

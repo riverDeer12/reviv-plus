@@ -599,6 +599,11 @@ img.animated.pulse {
     clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
 }
 
+.testimonial-author {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
 .testimonial .testimonial-carousel {
     position: relative;
     z-index: 1;
