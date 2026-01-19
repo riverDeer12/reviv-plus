@@ -399,6 +399,13 @@ img.animated.pulse {
     background: url(../img/hero-about.png) center center no-repeat !important;
 }
 
+#order { scroll-margin-top: 130px; }
+
+@media (max-width: 768px) {
+    #order { scroll-margin-top: 110px; }
+}
+
+
 @media (max-width: 1669px) {
     .hero-header {
         height: 100%;
@@ -407,9 +414,15 @@ img.animated.pulse {
     }
 }
 
+@media (max-width: 768px) {
+    #menu-logo {
+        height: 35px !important;
+    }
+}
+
 @media (max-width: 992px) {
     .navbar{
-        justify-content: unset !important;
+        /*justify-content: unset !important;*/
     }
 
     .nav-link{
@@ -431,6 +444,7 @@ img.animated.pulse {
         margin: 0 !important;
         font-size: .875rem !important;
     }
+
 
     #menu-logo{
         height: 45px !important;
