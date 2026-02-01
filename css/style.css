@@ -146,6 +146,17 @@ img.animated.pulse {
     max-width: 500px;
 }
 
+@media (max-width: 768px) {
+    .how-to-use-cta .about-cta-btn {
+        max-width: 380px;
+    }
+
+    .slogan-how-it-works {
+        font-size: 21px;
+    }
+
+}
+
 .add-to-cart-btn {
     background-color: #8DC63F;
     padding: 1rem;
