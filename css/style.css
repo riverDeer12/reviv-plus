@@ -484,6 +484,7 @@ img.animated.pulse {
 .review-card {
     border: 3px solid transparent;
     padding: 25px;
+    min-width: 250px;
     max-width: 340px;
     background-color: #ffffff;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
