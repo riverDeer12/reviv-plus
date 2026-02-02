@@ -494,6 +494,13 @@ img.animated.pulse {
     transition: all 0.3s ease;
 }
 
+.vertical_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .review-card.red {
     border-color: #EF4136;
 }
@@ -539,7 +546,7 @@ img.animated.pulse {
 }
 
 .review-text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -555,6 +562,10 @@ img.animated.pulse {
     .reviews-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .review-text {
+        font-size: 16px;
     }
 }
 
