@@ -45,7 +45,7 @@ Ukupno **27 sati rada**, odnosno **1.080,00 €** (vidi točku 3). Najbitniji di
 - Testiranje na mobitelu i računalu, puštanje u rad i provjera prvog automatski objavljenog cjenika.
 - Kratke upute (1 stranica): kako promijeniti cijenu i gdje se vidi cjenik.
 
-**Nije uključeno:** XML format (može se dodati, oko 2 h), izmjene poslovnog procesa knjigovodstva i pravno tumačenje propisa.
+**Nije uključeno:** izmjene poslovnog procesa knjigovodstva i pravno tumačenje propisa. Propis dopušta CSV ili XML; isporučuje se CSV.
 
 ## 3. Cijena
 
@@ -60,11 +60,9 @@ Ukupno **27 sati rada**, odnosno **1.080,00 €** (vidi točku 3). Najbitniji di
 | C) Provjera, testiranje, puštanje u rad, upute | 3 |
 | **Ukupno** | **27 h** |
 
-**Ukupno: 1.080,00 €** (40,00 €/h). [PDV nije uključen / nisam u sustavu PDV-a]
+**Ukupno: 1.080,00 €** (40,00 €/h).
 
 Hitna isporuka do 1.10. uključena je u cijenu.
-
-**Opcionalno, održavanje:** [20,00 €/mj.] za dnevni nadzor cjenika, reakciju na upozorenja i ažuriranje sidrenih cijena ili novih proizvoda.
 
 ## 4. Plan isporuke
 
@@ -80,7 +78,8 @@ Za rok od 1.10. od vas trebam **do utorka, 29.9. u 17:00**:
 4. potvrdu da mogu uključiti metapodatke proizvoda u Stripeu (pristup već imam).
 
 ## 5. Uvjeti
-- Plaćanje: [50 % avansno, 50 % po isporuci] / [po isporuci, rok 8 dana].
+- Plaćanje: 50 % po prihvaćanju ponude, 50 % po isporuci Faze 2, rok plaćanja 8 dana.
+- Ponuda se prihvaća odgovorom na e-mail.
 - Ponuda vrijedi 7 dana.
 - Izmjene opsega nakon prihvaćanja naplaćuju se po satnici iz točke 3.
 
