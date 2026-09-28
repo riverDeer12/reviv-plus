@@ -28,6 +28,12 @@ Mjesta gdje treba prikazati i sidrenu cijenu:
 3. Stripe Checkout (preko opisa proizvoda, ako to zatraži knjigovodstvo ili pravna služba),
 4. potencijalno potvrda narudžbe i e-mail potvrde (treba provjeriti tumačenje „svugdje gdje se prikazuje cijena”).
 
+**Cijene mijenja klijent sam u Stripeu**, a web ih samo povlači. Posljedice za rješenje:
+- sidrena cijena (fiksna na 10.9.2026.) čuva se u našem sustavu, ne u Stripe metapodacima koje klijent uređuje;
+- cjenik se mora ponovno objaviti i kad se cijena promijeni tijekom dana (Stripe webhook `price.*` / `product.updated`), a ne samo u 07:30;
+- sidrena cijena na Stripe Checkoutu ide kroz `custom_text` checkout sessiona, ne kroz opis proizvoda;
+- nova cijena u Stripeu mora biti postavljena kao `default_price`, što treba napisati u upute klijentu.
+
 ## 3. Što nam postojeća platforma već daje
 
 - **Jedan izvor cijena (Stripe).** Trenutnu cijenu CSV i web čitaju s istog mjesta, pa ne mogu jedno drugom proturječiti.

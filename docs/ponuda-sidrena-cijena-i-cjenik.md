@@ -1,4 +1,6 @@
-# PONUDA br. [__]/2026
+# PONUDA br. RDD-2026-09-01
+
+> Konačna verzija za klijenta je PDF `Ponuda_Sidrena_cijena_i_cjenik_ReViv_Plus.pdf`.
 
 **Naručitelj:** [naziv tvrtke], reviv-plus.com, n/p Nicola
 **Izvršitelj:** Milan Trbojević
@@ -16,7 +18,7 @@
 Da. Cijene za reviv-plus.com već se čitaju iz Stripea preko našeg API-ja, a API već ima sustav za zakazane poslove. Cjenik će se svaki dan u 07:30 sam generirati iz istih cijena koje kupac vidi na stranici i odmah objaviti. Svakodnevno ručno ništa ne treba raditi. Cijena u cjeniku i cijena na stranici uvijek će se podudarati, jer dolaze iz istog izvora.
 
 **Koliko vremena i koliko košta?**
-Ukupno **24 sata rada**, odnosno **[960,00 €]** (vidi točku 3). Najbitniji dio isporučujem do **1.10.2026.**, a ostatak do **6.10.2026.** (vidi točku 4).
+Ukupno **27 sati rada**, odnosno **1.080,00 €** (vidi točku 3). Najbitniji dio isporučujem do **1.10.2026.**, a ostatak do **6.10.2026.** (vidi točku 4).
 
 ## 2. Opseg posla
 
@@ -25,12 +27,14 @@ Ukupno **24 sata rada**, odnosno **[960,00 €]** (vidi točku 3). Najbitniji di
   `33,15 €` · *Sidrena cijena na 10.9.2026.: 33,15 €*
   Sidrena cijena je manjim fontom, ali jasno čitljiva i na mobitelu.
 - Prikaz na svim mjestima gdje se vidi cijena: kartice proizvoda, košarica, stranica potvrde narudžbe te opis proizvoda na Stripe stranici za plaćanje.
-- Sidrena cijena čuva se uz proizvod u Stripeu (metapodatak). Nova cijena u Stripeu automatski se pojavljuje i na stranici i u cjeniku.
+- Sidrena cijena je fiksna (10.9.2026.), pa se ne čuva u Stripeu nego u našem sustavu. Unosim je jednom i ne može se slučajno obrisati pri uređivanju proizvoda u Stripeu.
+- Klijent i dalje sam mijenja cijene u Stripeu. Stranica odmah prikazuje novu trenutnu cijenu, a sidrena ostaje ista.
 
 ### B) Dnevni cjenik (CSV)
 - **Automatsko generiranje** svaki dan u 07:30 (po zagrebačkom vremenu), s trenutnom i sidrenom cijenom za sve proizvode.
 - **Propisani naziv datoteke**, npr. `INTERNET_TRGOVINA_[ADRESA]_[OZNAKA]_[ŠIFRA]_01102026_0730.csv`. Točan oblik uskladit ću s obaviješću knjigovodstva.
 - **Stupci** prema obavijesti knjigovodstva. Radni prijedlog je u prilogu A.
+- **Promjena cijene tijekom dana.** API prati promjene cijena u Stripeu i u roku od nekoliko minuta objavljuje novu verziju cjenika s novim vremenom u nazivu datoteke.
 - **Arhiva od 30 dana.** Svaka datoteka čuva se točno onakva kakva je objavljena, a starije od 30 dana brišu se automatski.
 - **Stranica „Cjenici”** na reviv-plus.com (npr. `reviv-plus.com/cjenici`) s popisom datoteka za zadnjih 30 dana i poveznicom u podnožju svih stranica.
 - **Automatsko preuzimanje.** Svaka datoteka ima stalan izravni URL. Uz to postoji i strojno čitljiv popis (JSON), kako bi ga alati za prikupljanje cijena mogli preuzimati bez ručnog klikanja.
@@ -49,13 +53,14 @@ Ukupno **24 sata rada**, odnosno **[960,00 €]** (vidi točku 3). Najbitniji di
 |---|---:|
 | A) Sidrena cijena: API, prikaz na stranici, košarici, potvrdi i u Stripeu | 6 |
 | B1) Generiranje CSV-a, naziv datoteke, dnevni zakazani posao | 6 |
+| B1a) Praćenje promjena cijena u Stripeu i automatska nova verzija cjenika | 3 |
 | B2) Arhiva 30 dana i javni URL-ovi za preuzimanje | 4 |
 | B3) Stranica „Cjenici” i poveznica u podnožju | 3 |
 | B4) Nadzor i e-mail upozorenje | 2 |
 | C) Provjera, testiranje, puštanje u rad, upute | 3 |
-| **Ukupno** | **24 h** |
+| **Ukupno** | **27 h** |
 
-**Ukupno: [960,00 €]** ([40,00 €/h]). [PDV nije uključen / nisam u sustavu PDV-a]
+**Ukupno: 1.080,00 €** (40,00 €/h). [PDV nije uključen / nisam u sustavu PDV-a]
 
 Hitna isporuka do 1.10. uključena je u cijenu.
 
