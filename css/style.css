@@ -702,6 +702,19 @@ img.animated.pulse {
     font-weight: 500;
 }
 
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Anchor price must be clearly visible wherever the price is shown. */
+.product-anchor-price,
+.cart-anchor {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+}
+
 
 /*** Testimonial ***/
 .testimonial-card {
@@ -1123,3 +1136,12 @@ img.animated.pulse {
     }
 }
 
+/* Unit price with the anchor price below it. */
+.cart-col.cart-col--unit {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.cart-anchor { text-align: right; }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <title>Cjenici | ReViv Plus</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Dnevni cjenici internetske trgovine ReViv Plus s trenutnim i sidrenim cijenama.">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .price-lists-table a { word-break: break-all; }
+        .price-lists-table td, .price-lists-table th { font-size: .9rem; }
+        @media (max-width: 576px) {
+            .price-lists-table .reason { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="container py-5">
+    <a href="index.html" class="d-inline-block mb-4"><img height="54" src="img/logo.png" alt="ReViv Plus"></a>
+    <h1 class="text-green mb-4">Cjenici</h1>
+
+    <p>
+        Cjenik internetske trgovine ReViv Plus s trenutnom maloprodajnom cijenom i sidrenom cijenom objavljuje se
+        svaki dan do 8:00, a nova verzija i pri svakoj promjeni cijene. Cjenici su dostupni 30 dana od objave,
+        u CSV formatu (UTF-8, odvojeno točkom sa zarezom).
+    </p>
+
+    <div class="table-responsive my-4">
+        <table class="table align-middle price-lists-table">
+            <thead>
+            <tr>
+                <th scope="col">Datoteka</th>
+                <th scope="col">Objavljeno</th>
+                <th scope="col" class="reason">Razlog objave</th>
+            </tr>
+            </thead>
+            <tbody id="price-lists">
+            <tr>
+                <td colspan="3" class="text-muted">Učitavanje cjenika…</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="small text-muted">
+        Za automatsko preuzimanje popis svih dostupnih cjenika u JSON formatu nalazi se na adresi
+        <a id="price-lists-json" href="https://apex-performance.fit/api/price-lists/reviv-plus"
+           rel="noopener">https://apex-performance.fit/api/price-lists/reviv-plus</a>.
+        Svaka datoteka ima stalnu poveznicu koja vrijedi 30 dana od objave.
+    </p>
+
+    <hr class="my-5">
+    <p class="small text-muted mb-0">
+        © CAPOBIANCO d. o. o. • <a href="terms-and-conditions.html">Opći uvjeti</a> • <a href="gdpr.html">Politika
+        privatnosti</a> • <a href="cookies-policy.html">Politika kolačića</a> •
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">EU ODR</a>
+    </p>
+</div>
+
+<script>
+    const API_BASE = 'https://apex-performance.fit';
+
+    const tableBody = document.getElementById("price-lists");
+
+    function showMessage(text) {
+        tableBody.innerHTML = "";
+        const row = tableBody.insertRow();
+        const cell = row.insertCell();
+        cell.colSpan = 3;
+        cell.className = "text-muted";
+        cell.textContent = text;
+    }
+
+    function formatPublishedAt(value) {
+        return new Intl.DateTimeFormat("hr-HR", {
+            day: "numeric", month: "numeric", year: "numeric",
+            hour: "2-digit", minute: "2-digit", timeZone: "Europe/Zagreb"
+        }).format(new Date(value));
+    }
+
+    async function loadPriceLists() {
+        try {
+            const res = await fetch(`${API_BASE}/api/price-lists/reviv-plus`);
+
+            if (!res.ok) throw new Error('Network response was not ok');
+
+            const files = await res.json();
+
+            if (!files.length) {
+                showMessage("Trenutno nema objavljenih cjenika.");
+                return;
+            }
+
+            tableBody.innerHTML = "";
+
+            for (const file of files) {
+                const row = tableBody.insertRow();
+
+                const link = document.createElement("a");
+                link.href = file.url;
+                link.textContent = file.fileName;
+                link.setAttribute("download", file.fileName);
+                row.insertCell().appendChild(link);
+
+                row.insertCell().textContent = formatPublishedAt(file.publishedAt);
+                const reason = row.insertCell();
+                reason.className = "reason";
+                reason.textContent = file.reason;
+            }
+        } catch (err) {
+            console.error(err);
+            showMessage("Cjenike trenutno nije moguće učitati. Pokušajte ponovno za nekoliko minuta.");
+        }
+    }
+
+    loadPriceLists();
+</script>
+</body>
+</html>
