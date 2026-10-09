@@ -280,7 +280,9 @@
                         <a class="border-bottom" href="https://reviv-plus.com/gdpr.html"
                            target="_blank">Privatnost podataka</a><br>
                         <a class="border-bottom" href="https://reviv-plus.com/cookies-policy.html"
-                           target="_blank">Politika kolačića</a>
+                           target="_blank">Politika kolačića</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/cjenici.html"
+                           target="_blank">Cjenici</a>
                     </div>
                 </div>
                 <div class="col-md-6 text-center  mb-3 mb-md-0">
@@ -362,6 +364,7 @@
         <div>
           <div class="fw-semibold">${li.description || 'Stavka'}</div>
           <div class="small subtle">${li.quantity || 1} × ${displayAmount(li.unitAmount || li.amountSubtotal)}</div>
+          ${li.anchorPrice ? `<div class="small subtle">Sidrena cijena na ${li.anchorDate}: ${displayAmount(li.anchorPrice)}</div>` : ''}
         </div>
         <div class="fw-semibold">${displayAmount(li.amountTotal || li.amountSubtotal)}</div>
       </div>

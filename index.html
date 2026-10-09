@@ -571,7 +571,11 @@
                     <div class="product-row">
                         <img src="img/pill-box.png" alt="ReViv Plus 60">
                         <div class="product-info">
-                            <div class="product-description">ReViv PLUS 60 kapsula</div>
+                            <div class="product-text">
+                                <div class="product-description">ReViv PLUS 60 kapsula</div>
+                                <div class="product-price" aria-live="polite"></div>
+                                <div class="product-anchor-price" hidden></div>
+                            </div>
                             <span data-product-id="prod_TJtDu45campD2B" id="btn-product-60"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
                                     class="fa fa-shopping-basket"></i></span>
@@ -581,7 +585,11 @@
                     <div class="product-row">
                         <img src="img/pill-box.png" alt="ReViv Plus 30">
                         <div class="product-info">
-                            <div class="product-description">ReViv PLUS 30 kapsula</div>
+                            <div class="product-text">
+                                <div class="product-description">ReViv PLUS 30 kapsula</div>
+                                <div class="product-price" aria-live="polite"></div>
+                                <div class="product-anchor-price" hidden></div>
+                            </div>
                             <span data-product-id="prod_TJtERAoefR0NUO" id="btn-product-30"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
                                     class="fa fa-shopping-basket"></i></span>
@@ -1127,7 +1135,9 @@
                         <a class="border-bottom" href="https://reviv-plus.com/gdpr.html"
                            target="_blank">Privatnost podataka</a><br>
                         <a class="border-bottom" href="https://reviv-plus.com/cookies-policy.html"
-                           target="_blank">Politika kolačića</a>
+                           target="_blank">Politika kolačića</a><br>
+                        <a class="border-bottom" href="https://reviv-plus.com/cjenici.html"
+                           target="_blank">Cjenici</a>
                     </div>
                 </div>
                 <div class="col-md-6 text-center  mb-3 mb-md-0">
@@ -1204,6 +1214,19 @@
             localStorage.setItem(CART_KEY, JSON.stringify(cart));
         }
 
+        // Latest prices from Stripe by product id, so the cart never shows
+        // a price saved earlier in localStorage after the price changed.
+        const productInfo = {};
+
+        function cleanProductName(name) {
+            // Older carts saved the name together with the price, e.g. "ReViv PLUS 60 kapsula (33,15 €)".
+            return String(name ?? "").replace(/\s*\([^)]*€\)\s*$/, "").trim();
+        }
+
+        function anchorPriceText(anchorPrice, anchorDate) {
+            return `Sidrena cijena na ${anchorDate}: ${formatEUR(parseEuroPrice(anchorPrice))}`;
+        }
+
         function addToCart(productId, productName, productPrice) {
             const existing = cart.items.find(item => item.productId === productId);
             if (existing) {
@@ -1271,16 +1294,25 @@
                 const data = await res.json();
 
                 data.forEach(product => {
+                    productInfo[product.productId] = product;
+
                     const el = document.querySelector(`[data-product-id="${product.productId}"]`);
                     if (el) {
-                        const container = el.closest(".product-row")
-                            ?.querySelector(".product-description");
-                        if (container) {
-                            container.textContent = `${container.textContent.trim()} (${product.price})`;
+                        const row = el.closest(".product-row");
+                        const priceEl = row?.querySelector(".product-price");
+                        if (priceEl) {
+                            priceEl.textContent = formatEUR(parseEuroPrice(product.price));
+                        }
+                        const anchorEl = row?.querySelector(".product-anchor-price");
+                        if (anchorEl && product.anchorPrice) {
+                            anchorEl.textContent = anchorPriceText(product.anchorPrice, product.anchorDate);
+                            anchorEl.removeAttribute("hidden");
                         }
                         el.setAttribute('data-product-price', product.price);
                     }
                 });
+
+                if (!cartDiv.hasAttribute("hidden")) renderCartItems();
 
             } catch (err) {
                 console.error(err);
@@ -1355,8 +1387,12 @@
             let total = 0;
 
             for (const it of items) {
-                const name = it.productName ?? it.productId ?? "Proizvod";
-                const unitPrice = parseEuroPrice(it.productPrice);
+                const info = productInfo[it.productId];
+                const name = cleanProductName(it.productName) || it.productId || "Proizvod";
+                const unitPrice = parseEuroPrice(info?.price ?? it.productPrice);
+                const anchor = info?.anchorPrice
+                    ? `<span class="cart-anchor">${anchorPriceText(info.anchorPrice, info.anchorDate)}</span>`
+                    : "";
                 const qty = Number(it.quantity) || 0;
                 const line = unitPrice * qty;
                 total += line;
@@ -1389,6 +1425,7 @@
 
                         <div class="cart-col cart-col--unit" aria-label="Cijena proizvoda">
                           <span class="cart-unit">${formatEUR(unitPrice)}</span>
+                          ${anchor}
                         </div>
 
                         <div class="cart-col cart-col--line" aria-label="Cijena retka">
