@@ -364,7 +364,7 @@
         <div>
           <div class="fw-semibold">${li.description || 'Stavka'}</div>
           <div class="small subtle">${li.quantity || 1} × ${displayAmount(li.unitAmount || li.amountSubtotal)}</div>
-          ${li.anchorPrice ? `<div class="small subtle">Sidrena cijena na ${li.anchorDate}: ${displayAmount(li.anchorPrice)}</div>` : ''}
+          ${li.anchorPrice ? `<div class="small subtle">Bazna cijena (${li.anchorDate}): ${displayAmount(li.anchorPrice)}</div>` : ''}
         </div>
         <div class="fw-semibold">${displayAmount(li.amountTotal || li.amountSubtotal)}</div>
       </div>

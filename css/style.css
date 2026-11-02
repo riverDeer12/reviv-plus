@@ -707,7 +707,7 @@ img.animated.pulse {
     font-weight: 600;
 }
 
-/* Anchor price must be clearly visible wherever the price is shown. */
+/* Base (anchor) price must be clearly visible wherever the price is shown. */
 .product-anchor-price,
 .cart-anchor {
     display: block;
