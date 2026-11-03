@@ -709,6 +709,7 @@ img.animated.pulse {
 
 /* Base (anchor) price must be clearly visible wherever the price is shown. */
 .product-anchor-price,
+.product-lowest-price,
 .cart-anchor {
     display: block;
     font-size: 0.85rem;

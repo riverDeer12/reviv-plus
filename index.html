@@ -569,12 +569,13 @@
                     </h1>
 
                     <div class="product-row">
-                        <img src="img/pill-box.png" alt="ReViv Plus 60">
+                        <img src="img/pill-box.png" alt="ReViv PLUS 60 tableta">
                         <div class="product-info">
                             <div class="product-text">
-                                <div class="product-description">ReViv PLUS 60 kapsula</div>
+                                <div class="product-description">ReViv PLUS 60 tableta</div>
                                 <div class="product-price" aria-live="polite"></div>
                                 <div class="product-anchor-price" hidden></div>
+                                <div class="product-lowest-price" hidden></div>
                             </div>
                             <span data-product-id="prod_TJtDu45campD2B" id="btn-product-60"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
@@ -583,12 +584,13 @@
                     </div>
 
                     <div class="product-row">
-                        <img src="img/pill-box.png" alt="ReViv Plus 30">
+                        <img src="img/pill-box.png" alt="ReViv PLUS 30 tableta">
                         <div class="product-info">
                             <div class="product-text">
-                                <div class="product-description">ReViv PLUS 30 kapsula</div>
+                                <div class="product-description">ReViv PLUS 30 tableta</div>
                                 <div class="product-price" aria-live="polite"></div>
                                 <div class="product-anchor-price" hidden></div>
+                                <div class="product-lowest-price" hidden></div>
                             </div>
                             <span data-product-id="prod_TJtERAoefR0NUO" id="btn-product-30"
                                   class="add-to-cart-btn">Dodaj u košaricu <i
@@ -1220,7 +1222,19 @@
 
         function cleanProductName(name) {
             // Older carts saved the name together with the price, e.g. "ReViv PLUS 60 kapsula (33,15 €)".
+            // Names on the page are the current ones (tablets, not capsules), so they win.
             return String(name ?? "").replace(/\s*\([^)]*€\)\s*$/, "").trim();
+        }
+
+        function productNameOnPage(productId) {
+            return document.querySelector(`[data-product-id="${productId}"]`)
+                ?.closest(".product-row")
+                ?.querySelector(".product-description")
+                ?.textContent.trim();
+        }
+
+        function lowestPriceText(lowestPrice) {
+            return `Najniža cijena u zadnjih 30 dana: ${formatEUR(parseEuroPrice(lowestPrice))}`;
         }
 
         function anchorPriceText(anchorPrice, anchorDate) {
@@ -1302,6 +1316,11 @@
                         const priceEl = row?.querySelector(".product-price");
                         if (priceEl) {
                             priceEl.textContent = formatEUR(parseEuroPrice(product.price));
+                        }
+                        const lowestEl = row?.querySelector(".product-lowest-price");
+                        if (lowestEl && product.lowestPriceLast30Days) {
+                            lowestEl.textContent = lowestPriceText(product.lowestPriceLast30Days);
+                            lowestEl.removeAttribute("hidden");
                         }
                         const anchorEl = row?.querySelector(".product-anchor-price");
                         if (anchorEl && product.anchorPrice) {
@@ -1388,11 +1407,14 @@
 
             for (const it of items) {
                 const info = productInfo[it.productId];
-                const name = cleanProductName(it.productName) || it.productId || "Proizvod";
+                const name = productNameOnPage(it.productId) || cleanProductName(it.productName)
+                    || it.productId || "Proizvod";
                 const unitPrice = parseEuroPrice(info?.price ?? it.productPrice);
-                const anchor = info?.anchorPrice
+                const anchor = (info?.anchorPrice
                     ? `<span class="cart-anchor">${anchorPriceText(info.anchorPrice, info.anchorDate)}</span>`
-                    : "";
+                    : "") + (info?.lowestPriceLast30Days
+                    ? `<span class="cart-anchor">${lowestPriceText(info.lowestPriceLast30Days)}</span>`
+                    : "");
                 const qty = Number(it.quantity) || 0;
                 const line = unitPrice * qty;
                 total += line;
